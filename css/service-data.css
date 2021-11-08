@@ -1,0 +1,35 @@
+/* блок з датою та кількістю комнетарів */
+.service-data
+{
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+    margin: calc(var(--gap)/4) 0;
+}
+
+.service-data time 
+{
+    font-size: 12px;
+    line-height: 20px;
+    /* color: var(--white); */ 
+    color: var(--gray5);
+    font-weight: 800;
+}
+
+/* кількість коментів у пості */
+.service-data span 
+{
+    width: 40px;
+    height: 30px;
+    /* background: var(--white); */
+    background: var(--red-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 20px;
+    /* color: var(--red); */
+    color: var(--white);
+    clip-path: polygon(0% 23.33%, 100% 23.33%, 100% 81.67%, 55% 81.67%, 32.50% 103.33%, 32.5% 81.67%, 0% 81.67%);
+}

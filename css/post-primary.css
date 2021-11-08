@@ -1,0 +1,105 @@
+/* великий пост з фоновою картинкою */
+.post-primary
+{
+    position: relative;
+}
+
+/* градієнтний тег */
+.post-primary .tag 
+{
+    position: absolute;
+    top: var(--gap);
+    left: var(--gap);
+    z-index: 2;
+}
+
+/* фонова картинка, .picture не використовується */
+.post-primary picture 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    height: 100%!important;
+}
+
+.post-primary picture img 
+{
+    object-fit: cover;
+    height: 100%!important;
+}
+/* фонова картинка, .picture не використовується */
+
+/* затемнення */
+.post-primary::before 
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 1;
+}
+
+/* підпис до фото */
+.post-primary .post-content 
+{
+    position: absolute;
+    bottom: var(--gap);
+    left: var(--gap);
+    right: var(--gap);
+    color: var(--white);
+    z-index: 2;
+
+    display: flex;
+    flex-flow: column;
+    gap: calc(var(--gap)/2);
+}
+
+.post-primary .post-content h1 
+{
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 800;
+}
+
+.post-primary .post-content h1 a 
+{
+    color: var(--white);
+    text-decoration: none;
+}
+
+.post-primary .post-content .service-data 
+{
+    align-self: flex-start;
+    border-top: 1px solid var(--white);
+}
+
+.post-primary .post-content p
+{
+    font-size: 14px; 
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.post-primary .service-data
+{
+    margin: 0;
+}
+
+.post-primary .service-data time 
+{
+    color: var(--white);
+}
+
+/* кількість коментів у пості */
+.post-primary .service-data span 
+{
+    background: var(--white);
+    color: var(--red);
+}
+

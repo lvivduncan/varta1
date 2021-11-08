@@ -1,0 +1,135 @@
+
+/* пост у сайдбарі */
+.article-aside
+{
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    grid-gap: 12px;
+    margin: 0 var(--gap);
+    padding: calc(var(--gap)/4*3) 0;
+    position: relative;
+}
+
+.article-aside::before 
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 1px;
+    background: var(--gray4);
+    display: block;
+    z-index: 1;
+}
+
+.article-aside time
+{
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--black);
+    font-weight: 700;
+    text-align: center;
+}
+
+.article-aside h1 a
+{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    color: var(--black);
+    text-decoration: none;
+    display: block;
+    transition: .5s;
+}
+
+.article-aside h1 a:hover,
+.article-aside h1 a:focus
+{
+    color: var(--red);
+}
+
+/* відступ для 1 елемента */
+.article-aside:nth-of-type(1)
+{
+    margin-top: var(--gap);
+}
+
+/* важливий пост, червоним */
+.article-aside.important time
+{
+    color: var(--red);
+}
+
+.article-aside.important h1 a
+{
+    color: var(--red);
+    font-weight: 800;
+}
+/* важливий пост, червоним */
+
+/* пост з картинкою */
+.article-aside.bg
+{
+    position: relative;
+    display: block;
+    padding: 0;
+}
+
+.article-aside.bg .picture::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 1;
+}
+
+.article-aside.bg .post-content
+{
+    position: absolute;
+    bottom: var(--gap);
+    left: calc(var(--gap)/2);
+    right: calc(var(--gap)/2);
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    grid-gap: 12px;
+}
+
+.article-aside.bg .post-content::before
+{
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--gap)/2);
+    left: 0;
+    width: 40px;
+    height: 1px;
+    background: var(--white);
+    display: block;
+    z-index: 3;
+}
+
+.article-aside.bg .post-content time
+{
+    color: var(--white);
+}
+
+.article-aside.bg .post-content h1 a
+{
+    color: var(--white);
+    font-weight: 800;
+}
+
+.article-aside.bg::before 
+{
+    display: none;
+}
+/* пост з картинкою */
+
+
+
+

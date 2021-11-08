@@ -1,0 +1,32 @@
+/* окремий пост */
+.article 
+{
+    position: relative;
+}
+
+.article h1
+{
+    font-size: 21px;
+    line-height: 24px;
+    font-weight: 700; /* bold */
+    color: var(--black);
+}
+
+.article h1 a 
+{
+    text-decoration: none;
+    color: var(--black);
+    display: block;
+    transition: .5s;
+}
+
+.article h1 a:hover, 
+.article h1 a:focus 
+{
+    color: var(--red);
+}
+
+.article .picture 
+{
+    margin: 0 0 var(--gap);
+}

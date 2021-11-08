@@ -14,19 +14,20 @@
     --red: #991607;
     --black: #000;
     --red-dirty: #97473e;
-    /* --red-gradient: linear-gradient(90deg, var(--black) var(--white)); */
 
 
     --gray1: #f6f7f8; /* aside bg */
     --gray2: #eeeff1; /* border */
     --gray3: #5d595b; 
+    --gray4: #e6e6e6; /* лінія між постами в асайді */
+    --gray5: #999; /* date */
 
 
     --gap: 20px;
 
 
-    /* коментар, назва рубрики */
-    /* --marker: linear-gradient(90deg, #ae1201 #5d1f17); */
+    /* мітка, кнопка */
+    --red-gradient: linear-gradient(320deg, #5d1f17, #ae1201);
 
     
 }
@@ -41,6 +42,13 @@ body
     font-size: 18px;
     font-weight: 400;
     line-height: 1.4;
+}
+
+hr 
+{
+    border: none;
+    border-top: 1px solid var(--gray2);
+    margin: var(--gap) 0;
 }
 
 picture img,
@@ -81,6 +89,28 @@ picture source
     object-fit: cover;
 }
 /* пропорційні картинки */
+
+button,
+.button
+{
+    background: var(--red-gradient);
+    display: inline-block;
+    padding: 13px 22px;
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.center 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* основна шпальта */
 .wrapper

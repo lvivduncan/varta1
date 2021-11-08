@@ -8,36 +8,28 @@
     
 }
 
-#home-primary > div 
+/* лівий блок */
+.home-primary-main
 {
-    padding-top: var(--gap);
+    margin: var(--gap) 0;
+    display: grid;
+    grid-gap: var(--gap);
 }
 
+/* видаляємо вертикальний відступ */
+.home-primary-main hr 
+{
+    margin: 0;
+}
+
+/* правий блок */
 #home-primary aside 
 {
     background: var(--gray1);
+    padding: var(--gap) 0;
 }
 
-/* головне */
-#home-primary .important-post
+#home-primary aside .title 
 {
-    position: relative;
-}
-
-/* градієнтний тег */
-#home-primary .important-post .tag 
-{
-    position: absolute;
-    top: var(--gap);
-    left: var(--gap);
-    z-index: 1;
-}
-
-/* підпис до фото */
-#home-primary .important-post .post-content 
-{
-    position: absolute;
-    bottom: var(--gap);
-    left: var(--gap);
-    right: var(--gap);
+    margin: 0 calc(var(--gap)/4*3);
 }

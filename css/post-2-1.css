@@ -1,0 +1,28 @@
+
+/* широкий блок зліва, вузький справа */
+.post-2-1
+{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: var(--gap);
+    grid-template-areas: 
+        'post-2-1-title post-2-1-title'
+        'post-2-1-1 post-2-1-2';
+}
+
+.post-2-1 .title 
+{
+    grid-area: post-2-1-title;
+}
+
+/* wide */
+.post-2-1 .article:nth-of-type(1)
+{
+    grid-area: post-2-1-1;
+}
+
+/* narrow */
+.post-2-1 .article:nth-of-type(2)
+{
+    grid-area: post-2-1-2;
+}

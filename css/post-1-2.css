@@ -1,0 +1,35 @@
+
+/* широкий блок зліва, вузький справа */
+.post-1-2
+{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: var(--gap);
+    grid-template-areas: 
+        'post-1-2-title post-1-2-title'
+        'post-1-2-2 post-1-2-1';
+}
+
+.post-1-2 .title 
+{
+    grid-area: post-1-2-title;
+}
+
+/* narrow */
+.post-1-2 .article:nth-of-type(1)
+{
+    grid-area: post-1-2-2;
+}
+
+/* wide */
+.post-1-2 .article:nth-of-type(2)
+{
+    grid-area: post-1-2-1;
+    /* на всю висоту і ширину */
+}
+
+.post-1-2 .article:nth-of-type(2) picture img 
+{
+    object-fit: cover;
+    height: 100%!important;
+}

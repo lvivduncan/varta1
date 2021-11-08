@@ -1,0 +1,37 @@
+/* 3 рівних анонса */
+.posts-3
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: var(--gap) calc(var(--gap)/2*3);
+    grid-template-areas: 
+        'post-3-title post-3-title post-3-title'
+        'post-3-1 post-3-2 post-3-3'
+}
+
+.posts-3 .title 
+{
+    grid-area: post-3-title;
+}
+
+.posts-3 article:nth-of-type(1)
+{
+    grid-area: post-3-1;
+}
+
+.posts-3 article:nth-of-type(2)
+{
+    grid-area: post-3-2;
+}
+
+.posts-3 article:nth-of-type(3)
+{
+    grid-area: post-3-3;
+}
+
+.posts-3 p 
+{
+    font-size: 14px;
+    line-height: 20px;
+    /* color: var(--white); */
+}
