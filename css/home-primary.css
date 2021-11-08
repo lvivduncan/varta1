@@ -1,0 +1,43 @@
+/* перший блок під меню на головіній */
+#home-primary 
+{
+    display: grid;
+    /* 960*330 */
+    grid-template-columns: 2fr 1fr;
+    grid-gap: var(--gap);
+    
+}
+
+#home-primary > div 
+{
+    padding-top: var(--gap);
+}
+
+#home-primary aside 
+{
+    background: var(--gray1);
+}
+
+/* головне */
+#home-primary .important-post
+{
+    position: relative;
+}
+
+/* градієнтний тег */
+#home-primary .important-post .tag 
+{
+    position: absolute;
+    top: var(--gap);
+    left: var(--gap);
+    z-index: 1;
+}
+
+/* підпис до фото */
+#home-primary .important-post .post-content 
+{
+    position: absolute;
+    bottom: var(--gap);
+    left: var(--gap);
+    right: var(--gap);
+}

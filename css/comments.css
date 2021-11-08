@@ -1,0 +1,15 @@
+
+/* кількість коментів у пості */
+.comment
+{
+    width: 40px;
+    height: 59px;
+    background: var(--comment);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--white);
+}

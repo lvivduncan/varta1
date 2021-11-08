@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root
+{
+    --white: #fff;
+    --red: #991607;
+    --black: #000;
+    --red-dirty: #97473e;
+    /* --red-gradient: linear-gradient(90deg, var(--black) var(--white)); */
+
+
+    --gray1: #f6f7f8; /* aside bg */
+    --gray2: #eeeff1; /* border */
+    --gray3: #5d595b; 
+
+
+    --gap: 20px;
+
+
+    /* коментар, назва рубрики */
+    /* --marker: linear-gradient(90deg, #ae1201 #5d1f17); */
+
+    
+}
+
+html, body
+{
+    height: 100%;
+}
+
+body
+{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+picture img,
+picture source
+{
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* пропорційні картинки */
+.picture
+{
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.picture picture
+{
+    display: block;
+    width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.picture picture img
+{
+    width: 100%!important;
+    height: 100%!important;
+    object-fit: cover;
+}
+/* пропорційні картинки */
+
+/* основна шпальта */
+.wrapper
+{
+    width: 1300px;
+    margin: auto;
+}
+
+@media(max-width: 1340px)
+{
+    .wrapper
+    {
+        width: 95%;
+    }
+}
+/* основна шпальта */
+
+
