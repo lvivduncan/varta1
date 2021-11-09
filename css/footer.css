@@ -1,5 +1,109 @@
 
+
+/* 375 -75- 850 */
 #footer
 {
     background: var(--footer-bg);
+    color: var(--white);
+    padding-top: var(--gap);
+}
+
+#footer a 
+{
+    color: var(--white);
+    text-decoration: none;
+}
+
+#footer .wrapper 
+{
+    display: grid;
+    grid-template-columns: 375px 850px;
+    grid-gap: var(--gap) 75px;
+    grid-template-areas: 
+        'footer-left footer-right'
+        'copyright copyright';
+}
+
+/* логотип і підпис під ним */
+#footer-left
+{
+    grid-area: footer-left;
+}
+
+#footer-left img 
+{
+    width: auto;
+    max-width: 100%;
+}
+
+#footer-left p 
+{
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--gray6);
+    text-align: justify;
+}
+
+/* меню і правила під ним */
+#footer-right
+{
+    grid-area: footer-right;
+
+    align-self:  flex-end;
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+#footer-right p 
+{
+    font-size: 14px;
+    line-height: 18px;
+    width: 50%;
+}
+
+#footer-right nav ul
+{
+    display: flex;
+    gap: var(--gap);
+}
+
+#footer-right nav li
+{
+    display: block;
+}
+
+#footer-right nav li a
+{
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    transition: .5s;
+}
+
+#footer-right nav li a:hover,
+#footer-right nav li a:focus 
+{
+    color: var(--black);
+}
+
+/* цопірайт та соцкнопки */
+#copyright
+{
+    grid-area: copyright;
+
+    border-top: 1px solid var(--footer-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+#copyright p 
+{
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
 }
