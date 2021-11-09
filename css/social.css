@@ -31,11 +31,15 @@
 }
 
 /* у футері просто білі */
-#footer .social li a svg,
+#footer .social li a svg
+{
+    fill: var(--white);
+}
+
 #footer .social li a:hover svg,
 #footer .social li a:focus svg
 {
-    fill: var(--white);
+    fill: var(--black);
 }
 
 /* соціальні групи є і в хедері, і у футері */
