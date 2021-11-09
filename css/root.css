@@ -13,7 +13,8 @@
     --white: #fff;
     --red: #991607;
     --black: #000;
-    --red-dirty: #97473e;
+    --red-dirty: linear-gradient(90deg,#97473e, #723832);
+    --red-border : #ad7a75; /* search-ads border */
 
 
     --gray1: #f6f7f8; /* aside bg */
@@ -21,6 +22,7 @@
     --gray3: #5d595b; 
     --gray4: #e6e6e6; /* лінія між постами в асайді */
     --gray5: #999; /* date */
+    
 
 
     --gap: 20px;
@@ -29,7 +31,10 @@
     /* мітка, кнопка */
     --red-gradient: linear-gradient(320deg, #5d1f17, #ae1201);
 
-    
+    /* поля у блоці "пошук оголошень" */
+    --red-input:  linear-gradient(90deg,#aa6b64, #a56962);
+
+    --white-button: linear-gradient(90deg, #fff, #cbcfd9);
 }
 
 html, body
@@ -98,10 +103,14 @@ button,
     padding: 13px 22px;
     color: var(--white);
     text-transform: uppercase;
+    text-align: center;
     font-size: 12px;
     line-height: 18px;
     font-weight: bold;
     text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
 }
 
 .center 

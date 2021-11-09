@@ -30,3 +30,9 @@
 {
     margin: 0 0 var(--gap);
 }
+
+.article p 
+{
+    font-size: 14px;
+    line-height: 20px;
+}

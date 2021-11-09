@@ -32,4 +32,6 @@
     /* color: var(--red); */
     color: var(--white);
     clip-path: polygon(0% 23.33%, 100% 23.33%, 100% 81.67%, 55% 81.67%, 32.50% 103.33%, 32.5% 81.67%, 0% 81.67%);
+    position: relative;
+    top: -2px;
 }

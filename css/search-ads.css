@@ -1,0 +1,151 @@
+.search-ads 
+{
+    background: var(--red-dirty);
+    padding: 70px 0 50px;
+
+}
+
+.search-ads .wrapper 
+{
+    display: grid;
+    grid-gap: var(--gap);    
+}
+
+/* 4 автономні блоки -- заголовок, пошук, вивід, кнопка */
+
+/* 1. */
+.search-ads .title
+{
+    color: var(--white);
+}
+
+
+
+/* 2. поля пошуку */
+.search-ads-header
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: calc(var(--gap)/2*3) var(--gap); 
+}
+
+/* поля та селект */
+.search-ads input,
+.search-ads select 
+{
+    background: var(--red-input);
+    display: block;
+    width: 100%;
+    appearance: none;
+    border: none;
+    padding: 13px 22px;
+    font-weight: 500;
+    border: 1px solid transparent;
+    outline: none;
+    color: var(--white);
+}
+
+.search-ads input::placeholder
+{
+    color: var(--white);
+}
+
+.search-ads input:focus,
+.search-ads select:focus 
+{
+    border-color: var(--white);
+}
+
+.search-ads select
+{
+    cursor: pointer;
+}
+
+/* 148 знайдених оголошень */
+.search-ads-output
+{
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    gap: 5px;
+    grid-column: 1 / -2;
+}
+
+/* кнопка пошуку */
+.search-ads button 
+{
+    background: var(--white-button);
+    color: var(--red);
+    display: block;
+    width: 100%;
+}
+
+/* 3. вивід артиклів */
+.search-ads-main
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: calc(var(--gap)/2*3) var(--gap);
+}
+
+.search-ads-main .article
+{
+    border: 1px solid var(--red-border);
+}
+
+.search-ads-main .picture 
+{
+    margin: -1px -1px var(--gap);
+    width: calc(100% + 2px);
+}
+
+.search-ads-main h1 
+{
+    padding: 0 var(--gap);
+}
+
+.search-ads-main h1 a,
+.search-ads-main h1 a:hover,
+.search-ads-main h1 a:focus
+{
+    color: var(--white);
+}
+
+.search-ads-main .service-data
+{
+    padding: 0 var(--gap);
+}
+
+.search-ads-main .service-data time
+{
+    font-weight: 500;
+    color: var(--white);
+    font-size: 14px;
+}
+
+.search-ads-main .service-data span
+{
+    background: var(--white);
+    color: var(--red);
+}
+
+.search-ads-main p 
+{
+    padding: 0 var(--gap) var(--gap);
+    color: var(--white);
+}
+
+.search-ads-main p strong
+{
+    display: block;
+    font-size: 21px;
+    margin: calc(var(--gap)/2) 0 0;
+}
+
+/* 4. кнопка "усі оголошення" */
+.search-ads .button 
+{
+    width: 300px;
+    background: var(--white-button);
+    color: var(--red);
+}
