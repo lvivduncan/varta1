@@ -1,5 +1,5 @@
 /* перший блок під меню на головіній */
-#home-primary 
+#home-top 
 {
     display: grid;
     /* 960*330 */
@@ -23,13 +23,13 @@
 }
 
 /* правий блок */
-#home-primary aside 
+#home-top aside 
 {
     background: var(--gray1);
     padding: var(--gap) 0;
 }
 
-#home-primary aside .title 
+#home-top aside .title 
 {
     margin: 0 calc(var(--gap)/4*3);
 }

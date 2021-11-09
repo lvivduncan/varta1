@@ -125,7 +125,7 @@
 
 .search-ads-main .service-data span
 {
-    background: var(--white);
+    background: var(--white-button);
     color: var(--red);
 }
 

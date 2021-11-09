@@ -1,0 +1,44 @@
+
+/* якщо буде тільки на головній, то можна лишити так */
+
+.posts-4
+{
+    margin: var(--gap) 0;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: var(--gap) calc(var(--gap)/2*3);
+    grid-template-areas: 
+        'posts-4-title posts-4-title posts-4-title posts-4-title'
+        'posts-4-1 posts-4-2 posts-4-3 posts-4-4'
+}
+
+.posts-4 .title 
+{
+    grid-area: posts-4-title;
+}
+
+.posts-4 article:nth-of-type(1)
+{
+    grid-area: posts-4-1;
+}
+
+.posts-4 article:nth-of-type(2)
+{
+    grid-area: posts-4-2;
+}
+
+.posts-4 article:nth-of-type(3)
+{
+    grid-area: posts-4-3;
+}
+
+.posts-4 article:nth-of-type(4)
+{
+    grid-area: posts-4-4;
+}
+
+.posts-4 p 
+{
+    font-size: 14px;
+    line-height: 20px;
+}
