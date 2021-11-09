@@ -107,3 +107,9 @@
     line-height: 24px;
     font-weight: 300;
 }
+
+#copyright a:hover, 
+#copyright a:focus 
+{
+    text-decoration: underline;
+} 

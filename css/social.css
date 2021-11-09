@@ -25,9 +25,10 @@
     transition: .5s;
 }
 
-.social li a:hover svg 
+.social li a:hover svg, 
+.social li a:focus svg 
 {
-    fill: var(--white);
+    fill: var(--black);
 }
 
 /* у футері просто білі */
@@ -36,10 +37,10 @@
     fill: var(--white);
 }
 
-#footer .social li a:hover svg,
+/* #footer .social li a:hover svg,
 #footer .social li a:focus svg
 {
-    fill: var(--black);
-}
+    fill: var(--white);
+} */
 
 /* соціальні групи є і в хедері, і у футері */
