@@ -1,13 +1,25 @@
 #header
 {
-    height: 100px;
+    border-bottom: 1px solid var(--gray2);
+    /* height: 100px; */
     display: grid;
     align-items: center;
-    grid-template-columns: auto 1fr auto;
+    /* grid-template-columns: auto 1fr auto; */
+    grid-template-columns: 260px auto 165px;
+    grid-gap: 0 calc(var(--gap)*2);
     grid-template-areas: 
         'logo nav header-social';
-    grid-gap: calc(var(--gap)*2);
-    border-bottom: 1px solid var(--gray2);
+}
+
+@media(max-width:1220px)
+{
+    #header 
+    {
+        grid-template-columns: 260px 1fr;
+        grid-template-areas: 
+            'logo header-social'
+            'logo nav'
+    }
 }
 
 #logo
@@ -19,11 +31,54 @@
 #nav 
 {
     grid-area: nav;
+
     align-self: flex-start;
     padding: 10px 0 0;
+    overflow-x: hidden;
+    position: relative;
 }
 
-/* нанішня дата */
+@media(max-width:1220px)
+{
+    #nav 
+    {
+        padding: 0;
+    }
+}
+
+/* мобільна кнопка */
+#nav-button
+{
+    width: 50px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    cursor: pointer;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+    display: none;
+}
+
+@media(max-width:1220px)
+{
+    #nav-button 
+    {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+
+#nav-button svg
+{
+    width: 22px;
+    height: 22px;
+    background: var(--white);
+}
+
+
+/* нинішня дата */
 #nav time 
 {
     font-size: 12px;
@@ -31,6 +86,14 @@
     font-weight: 800;
     display: block;
     text-transform: uppercase;
+}
+
+@media(max-width:1220px)
+{
+    #nav time
+    {
+        display: none;
+    }
 }
 
 /* перше слово */
@@ -73,6 +136,14 @@
     grid-area: header-social;
     display: flex;
     align-items: center;
+}
+
+@media(max-width:1220px)
+{
+    #header-social
+    {
+        justify-content: flex-end;
+    }    
 }
 
 #search-button

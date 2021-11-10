@@ -7,16 +7,14 @@
 @import url('./home-top.css');
 @import url('./post-primary.css'); /* todo: rename */
 @import url('./posts-3.css');
-
-@import url('./post-4.css');
-
-@import url('./post-2-1.css');
-@import url('./post-1-2.css');
-@import url('./post-1-1-2.css');
-@import url('./post-2-1-1.css');
+@import url('./posts-4.css');
+@import url('./posts-2-1.css');
+@import url('./posts-1-2.css');
+@import url('./posts-1-1-2.css');
+@import url('./posts-2-1-1.css');
 @import url('./article-aside.css');
 @import url('./search-ads.css');
-@import url('./home-bottom.css');
+/* @import url('./home-bottom.css'); */
 @import url('./tags.css');
 @import url('./social.css');
 @import url('./footer.css');

@@ -45,6 +45,14 @@
     z-index: 1;
 }
 
+@media(max-width:996px)
+{
+    .post-primary::before 
+    {
+        display: none;
+    }    
+}
+
 /* підпис до фото */
 .post-primary .post-content 
 {
@@ -60,11 +68,31 @@
     gap: calc(var(--gap)/2);
 }
 
+@media(max-width:996px)
+{
+    .post-primary .post-content 
+    {
+        position: static;
+        margin-top: var(--gap);
+        color: var(--black);
+    }    
+}
+
 .post-primary .post-content h1 
 {
     font-size: 30px;
     line-height: 30px;
     font-weight: 800;
+}
+
+@media(max-width:996px)
+{
+    .post-primary .post-content h1
+    {
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: 700;
+    }
 }
 
 .post-primary .post-content h1 a 
@@ -73,10 +101,26 @@
     text-decoration: none;
 }
 
+@media(max-width:996px)
+{
+    .post-primary .post-content h1 a 
+    {
+        color: var(--black);
+    }
+}
+
 .post-primary .post-content .service-data 
 {
     align-self: flex-start;
     border-top: 1px solid var(--white);
+}
+
+@media(max-width:996px)
+{
+    .post-primary .post-content .service-data 
+    {
+        border: none;
+    }
 }
 
 .post-primary .post-content p
@@ -96,6 +140,14 @@
     color: var(--white);
 }
 
+@media(max-width:996px)
+{
+    .post-primary .service-data time 
+    {
+        color: var(--gray5);
+    }    
+}
+
 /* кількість коментів у пості */
 .post-primary .service-data span 
 {
@@ -103,3 +155,11 @@
     color: var(--red);
 }
 
+@media(max-width:996px)
+{
+    .post-primary .service-data span 
+    {
+        background: var(--red-gradient);
+        color: var(--white);
+    }    
+}

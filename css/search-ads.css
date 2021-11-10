@@ -1,8 +1,12 @@
+
+/*///////////////////
+// пошук оголошень //
+///////////////////*/
+
 .search-ads 
 {
     background: var(--red-dirty);
     padding: 70px 0 50px;
-
 }
 
 .search-ads .wrapper 
@@ -27,6 +31,16 @@
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-gap: calc(var(--gap)/2*3) var(--gap); 
+}
+
+@media(max-width:996px)
+{
+    .search-ads-header
+    {
+        /* display: grid; */
+        grid-template-columns: repeat(2,1fr);
+        /* grid-gap: calc(var(--gap)/2*3) var(--gap);  */
+    }
 }
 
 /* поля та селект */
@@ -71,6 +85,18 @@
     grid-column: 1 / -2;
 }
 
+@media(max-width:996px)
+{
+/*     .search-ads-output
+    {
+        display: flex;
+        align-items: center;
+        color: var(--white);
+        gap: 5px;
+        grid-column: 1 / -2;
+    } */
+}
+
 /* кнопка пошуку */
 .search-ads button 
 {
@@ -86,6 +112,16 @@
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-gap: calc(var(--gap)/2*3) var(--gap);
+}
+
+@media(max-width:996px)
+{
+    .search-ads-main
+    {
+        /* display: grid; */
+        grid-template-columns: repeat(2,1fr);
+        /* grid-gap: calc(var(--gap)/2*3) var(--gap); */
+    }    
 }
 
 .search-ads-main .article
@@ -148,4 +184,9 @@
     width: 300px;
     background: var(--white-button);
     color: var(--red);
+}
+
+@media(max-width:996px)
+{
+    
 }

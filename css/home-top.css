@@ -1,30 +1,67 @@
-/* перший блок під меню на головіній */
+
+/*/////////////////////////////////////
+// перший блок під меню на головіній //
+/////////////////////////////////////*/
+
 #home-top 
 {
     display: grid;
     /* 960*330 */
     grid-template-columns: 2fr 1fr;
-    grid-gap: var(--gap);
-    
+    grid-template-rows: repeat(4,auto);
+    grid-gap: 0 var(--gap);
+    grid-template-areas:
+        'home-top-1 home-top-aside' 
+        'home-top-2 home-top-aside' 
+        'home-top-3 home-top-aside' 
+        'home-top-4 home-top-aside';
+    /* align-items: start; */
 }
 
-/* лівий блок */
-.home-primary-main
+/* головне */
+#home-top-1
 {
+    grid-area: home-top-1;
+
     margin: var(--gap) 0;
-    display: grid;
-    grid-gap: var(--gap);
+    align-self: start;
 }
 
-/* видаляємо вертикальний відступ */
-.home-primary-main hr 
+/* львів */
+#home-top-2
 {
-    margin: 0;
+    grid-area: home-top-2;
+
+    padding-bottom: var(--gap);
+    align-self: start;
 }
+
+/* кримінал */
+#home-top-3
+{
+    grid-area: home-top-3;
+
+    padding: var(--gap) 0;
+    border-top: 1px solid var(--gray2);
+    align-self: start;
+}
+
+/* дорожні події */
+#home-top-4
+{
+    grid-area: home-top-4;
+
+    padding: var(--gap) 0;
+    border-top: 1px solid var(--gray2);
+    align-self: start;
+}
+
 
 /* правий блок */
 #home-top aside 
 {
+    grid-area: home-top-aside;
+
     background: var(--gray1);
     padding: var(--gap) 0;
 }

@@ -17,11 +17,25 @@
 #footer .wrapper 
 {
     display: grid;
-    grid-template-columns: 375px 850px;
+    /* grid-template-columns: 375px 850px; */
+    grid-template-columns: 375px 1fr;
     grid-gap: var(--gap) 75px;
     grid-template-areas: 
         'footer-left footer-right'
         'copyright copyright';
+}
+
+@media(max-width:996px)
+{
+    #footer .wrapper 
+    {
+        display: grid;
+        /* grid-template-columns: 375px 850px; */
+        grid-gap: var(--gap) 75px;
+        grid-template-areas: 
+            'footer-left footer-right'
+            'copyright copyright';
+    }
 }
 
 /* логотип і підпис під ним */
@@ -63,10 +77,19 @@
     width: 50%;
 }
 
+@media(max-width:996px)
+{
+    #footer-right p 
+    {
+        width: 100%;
+    }    
+}
+
 #footer-right nav ul
 {
     display: flex;
     gap: var(--gap);
+    flex-wrap: wrap;
 }
 
 #footer-right nav li

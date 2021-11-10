@@ -4,6 +4,7 @@
 {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 1fr;
     grid-gap: var(--gap);
     grid-template-areas: 
         'post-2-1-title post-2-1-title'
