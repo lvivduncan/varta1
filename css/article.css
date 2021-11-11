@@ -12,6 +12,15 @@
     color: var(--black);
 }
 
+/* примусово зменшую шрифт, бо на смартфоні довгі слова розпираються екран */
+@media(max-width:360px)
+{
+    .article h1
+    {
+        font-size: 17px!important;
+    }
+}
+
 .article h1 a 
 {
     text-decoration: none;

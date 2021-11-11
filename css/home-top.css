@@ -9,13 +9,29 @@
     /* 960*330 */
     grid-template-columns: 2fr 1fr;
     grid-template-rows: repeat(4,auto);
-    grid-gap: 0 var(--gap);
+    gap: 0 var(--gap);
     grid-template-areas:
         'home-top-1 home-top-aside' 
         'home-top-2 home-top-aside' 
         'home-top-3 home-top-aside' 
         'home-top-4 home-top-aside';
     /* align-items: start; */
+}
+
+/* блоки переміщаються неочевидним чином! */
+@media(max-width:776px)
+{
+    #home-top 
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            'home-top-1'
+            'home-top-aside' 
+            'home-top-2' 
+            'home-top-3' 
+            'home-top-4';
+    }
 }
 
 /* головне */
@@ -64,6 +80,28 @@
 
     background: var(--gray1);
     padding: var(--gap) 0;
+}
+
+/* ховаємо 4 останніх артикля */
+@media(max-width:996px)
+{
+    #home-top aside article:nth-last-of-type(1),
+    #home-top aside article:nth-last-of-type(2),
+    #home-top aside article:nth-last-of-type(3),
+    #home-top aside article:nth-last-of-type(4)
+    {
+        display: none;
+    }
+}
+
+@media(max-width:776px)
+{
+    #home-top aside 
+    {
+        margin: 0 -2.5% var(--gap);
+        border-top: 1px solid var(--gray6);
+        border-bottom: 1px solid var(--gray6);
+    }
 }
 
 #home-top aside .title 

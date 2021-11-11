@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: auto 1fr;
-    grid-gap: var(--gap) calc(var(--gap)/2*3);
+    gap: var(--gap) calc(var(--gap)/2*3);
     grid-template-areas: 
         'post-3-title post-3-title post-3-title'
         'post-3-1 post-3-2 post-3-3'
@@ -16,10 +16,25 @@
     {
         /* display: grid; */
         grid-template-columns: repeat(2,1fr);
-        /* grid-gap: var(--gap) calc(var(--gap)/2*3); */
+        /* gap: var(--gap) calc(var(--gap)/2*3); */
         grid-template-areas: 
             'post-3-title post-3-title'
             'post-3-1 post-3-2'
+    }    
+}
+
+@media(max-width:500px)
+{
+    .posts-3
+    {
+        /* display: grid; */
+        /* grid-template-columns: repeat(3,1fr); */
+        grid-template-rows: auto;
+        /* gap: var(--gap) calc(var(--gap)/2*3); */
+        grid-template-areas: 
+            'post-3-title post-3-title'
+            'post-3-1 post-3-1'
+            'post-3-2 post-3-3'
     }    
 }
 
@@ -49,6 +64,21 @@
     {
         display: none;
     }    
+}
+
+@media(max-width:500px)
+{
+    .posts-3 article:nth-of-type(3)
+    {
+        display: block;
+    }   
+    
+    .posts-3 article:nth-of-type(2) h1,
+    .posts-3 article:nth-of-type(3) h1
+    {
+        font-size: 18px;
+        line-height: 21px;
+    }
 }
 
 .posts-3 p 

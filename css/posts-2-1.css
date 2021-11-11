@@ -1,29 +1,47 @@
 
 /* широкий блок зліва, вузький справа */
-.post-2-1
+.posts-2-1
 {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto 1fr;
-    grid-gap: var(--gap);
+    gap: var(--gap);
     grid-template-areas: 
-        'post-2-1-title post-2-1-title'
-        'post-2-1-1 post-2-1-2';
+        'posts-2-1-title posts-2-1-title'
+        'posts-2-1-1 posts-2-1-2';
 }
 
-.post-2-1 .title 
+@media(max-width:996px)
 {
-    grid-area: post-2-1-title;
+    .posts-2-1
+    {
+        grid-template-columns: repeat(2,1fr);
+    }    
+}
+
+.posts-2-1 .title 
+{
+    grid-area: posts-2-1-title;
 }
 
 /* wide */
-.post-2-1 .article:nth-of-type(1)
+.posts-2-1 .article:nth-of-type(1)
 {
-    grid-area: post-2-1-1;
+    grid-area: posts-2-1-1;
 }
 
 /* narrow */
-.post-2-1 .article:nth-of-type(2)
+.posts-2-1 .article:nth-of-type(2)
 {
-    grid-area: post-2-1-2;
+    grid-area: posts-2-1-2;
+}
+
+@media(max-width:500px)
+{
+    .posts-2-1 .article h1,
+    .posts-2-1 .post-primary h1
+    {
+        font-size: 18px;
+        line-height: 21px;
+    }    
 }

@@ -5,10 +5,18 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto 1fr;
-    grid-gap: var(--gap);
+    gap: var(--gap);
     grid-template-areas: 
         'posts-1-2-title posts-1-2-title'
         'posts-1-2-2 posts-1-2-1';
+}
+
+@media(max-width:996px)
+{
+    .posts-1-2
+    {
+        grid-template-columns: repeat(2,1fr);
+    }    
 }
 
 .posts-1-2 .title 
@@ -33,4 +41,14 @@
 {
     object-fit: cover;
     height: 100%!important;
+}
+
+@media(max-width:500px)
+{
+    .posts-1-2 .article h1,
+    .posts-1-2 .post-primary h1
+    {
+        font-size: 18px;
+        line-height: 21px;
+    }    
 }

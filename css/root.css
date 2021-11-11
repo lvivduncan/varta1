@@ -12,6 +12,7 @@
 {
     --white: #fff;
     --red: #991607;
+    /* --red-cross: #ff0000; */
     --black: #000;
     --red-dirty: linear-gradient(90deg,#97473e, #723832);
     --red-border : #ad7a75; /* search-ads border */
@@ -25,6 +26,7 @@
     --footer-bg: #434a54;
     --footer-border: #656b73;
     --gray6: #eeeff1; /* примітка футера */
+    --bg-nav: #191919;
 
 
     --gap: 20px;
@@ -122,6 +124,14 @@ button,
     justify-content: center;
 }
 
+/* сховати на дисплеї менше 776 */
+@media(max-width:776px)
+{
+    .hide-776
+    {
+        display: none;
+    }
+}
 
 /* основна шпальта */
 .wrapper

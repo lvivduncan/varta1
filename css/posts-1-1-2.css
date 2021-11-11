@@ -5,7 +5,7 @@
     padding: var(--gap) 0;
     display: grid;
     grid-template-columns: repeat(2,1fr) 2fr;
-    grid-gap: var(--gap);
+    gap: var(--gap);
     grid-template-areas: 
         'posts-1-1-2-title posts-1-1-2-title posts-1-1-2-title'
         'posts-1-1-2-1 posts-1-1-2-2 posts-1-1-2-3';

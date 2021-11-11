@@ -29,10 +29,9 @@
                     <li><a href="#">ДТП</a></li>
                     <li><a href="#">Кримінал</a></li>
                     <li><a href="#">Розшук</a></li>
+
+                    <div id="nav-button"></div>
                 </ul>
-                <div id="nav-button">
-                    <svg viewBox='0 0 448 512'><path d='M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z'></path></svg>
-                </div>
             </nav>
             <div id="header-social">
                 <div id="search-button"></div>
@@ -121,12 +120,12 @@
             </div>
             <!-- .posts-3 -->
 
-            <div class="post-2-1" id="home-top-3">
+            <div class="posts-2-1" id="home-top-3">
                 <div class="title">Кримінал</div>
 
                 <article class="post-primary">
 
-                    <div class="picture">
+                    <div class="picture static">
                         <picture>
                             <img src="temp/home-primary.jpg" alt="">
                         </picture>
@@ -179,12 +178,11 @@
                 </article>
 
                 <article class="post-primary">    
-                    <!-- <div class="picture"> -->
+                    <div class="picture static">
                         <picture>
                             <img src="temp/home-primary.jpg" alt="">
                         </picture>
-                        
-                    <!-- </div> -->
+                    </div>
 
                     <div class="post-content">
                         <h1><a href="#">В Україні виявили ще 4821 випадків Ковід-19</a></h1>
@@ -376,6 +374,73 @@
     </div>
     <!-- .wrapper -->
 
+    <div id="mobile">
+        <div class="wrapper">
+            <header id="mobile-header">
+                <a href="#" title="varta 1" id="mobile-logo">
+                    <picture>
+                        <img src="images/logo-header.png" alt="">
+                    </picture>
+                </a>
+
+                <div id="mobile-button"></div>
+            </header>
+            <nav id="mobile-nav">
+                <ul>
+                    <li><a href="#"><strong>Новини</strong></a></li>
+                    <li><a href="#">Головне</a></li>
+                    <li><a href="#">Львів</a></li>
+                    <li><a href="#">Політика</a></li>
+                    <li><a href="#">Світ</a></li>
+                    <li><a href="#">Коронавірус</a></li>
+                    <li><a href="#">Економіка</a></li>
+                    <li><a href="#">Кримінал</a></li>
+                    <li><a href="#">Здоров'я</a></li>
+                    <li><a href="#">Спорт</a></li>
+                    <li><a href="#">Технології</a></li>
+                    <li><a href="#">Курйози</a></li>
+                    <li><a href="#">Місця</a></li>
+                    <li><a href="#">Фоторепортажі</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#"><strong>Архів</strong></a></li>
+                    <li><a href="#">Drozdov</a></li>
+                    <li><a href="#">Правда у Христі</a></li>
+                    <li><a href="#">Правова р[Е]волюція</a></li>
+                    <li><a href="#">Наголо</a></li>
+                    <li><a href="#">Антикриза</a></li>
+                    <li><a href="#">Реальний футбол</a></li>
+                    <li><a href="#">Культурний блог</a></li>
+                    <li><a href="#">Наголос</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#"><strong>Телепроєкти</strong></a></li>
+                    <li><a href="#">Пряма мова Львова</a></li>
+                    <li><a href="#">Говорить Великий Львів</a></li>
+                    <li><a href="#">Народне Толк-Шоу</a></li>
+                    <li><a href="#">Ген українців</a></li>
+                    <li><a href="#">Юркевич. Акценти</a></li>
+                    <li><a href="#">Теорія правди</a></li>
+                    <li><a href="#">Формула здоров'я</a></li>
+                    <li><a href="#">Все можливо</a></li>
+                    <li><a href="#">Отакої</a></li>
+                    <li><a href="#">Без гриму</a></li>
+                    <li><a href="#">Хвилина правди</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#"><strong>Телепрограма</strong></a></li>
+                    <li><a href="#"><strong>Обличчя медія</strong></a></li>
+                    <li><a href="#"><strong>Наживо</strong></a></li>
+                    <li><a href="#"><strong>Блоги</strong></a></li>
+                    <li><a href="#">Про нас</a></li>
+                    <li><a href="#">Контакти</a></li>
+                    <li><a href="#">Реклама</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- мобільне меню -->
+
     <section class="search-ads">
         <div class="wrapper">
             <h1 class="title">Пошук оголошень</h1>
@@ -483,10 +548,10 @@
 
     <!-- 3 блоки з артиклями -->
     
-    <div class="wrapper">
+    <div class="wrapper hide-776">
 
         <div class="posts-1-1-2">
-            <div class="title">Львів</div>
+            <div class="title">Розшук</div>
             <article class="article">
                 <div class="picture">
                     <picture>
@@ -514,11 +579,11 @@
                 <p>Лоукостер Ринейр відркив продаж на прямий рейс Львів-Манчестер, який він запустить 5 листопада. Авіакомпанія буде літати за цим маршрутом два рази на тиждень у понеділок і п'ятницю. Час у дорозі становитиме 3...</p>
             </article>
             <article class="post-primary">
-                <!-- <div class="picture"> -->
+                <div class="picture static">
                     <picture>
                         <img src="temp/03.jpg" alt="">
                     </picture>
-                <!-- </div> -->
+                </div>
                 <div class="post-content">
                     <h1><a href="#">В Україні виявили ще 4821 випадків Ковід-19</a></h1>
                     
@@ -534,15 +599,15 @@
     </div>
     <!-- .posts-1-1-2 .wrapper -->
 
-    <div class="posts-2-1-1">
+    <div class="posts-2-1-1 hide-776">
         <div class="wrapper">
             <div class="title">Україна</div>
             <article class="post-primary">
-                <!-- <div class="picture"> -->
+                <div class="picture static">
                     <picture>
                         <img src="temp/03.jpg" alt="">
                     </picture>
-                <!-- </div> -->
+                </div>
                 <div class="post-content">
                     <h1><a href="#">В Україні виявили ще 4821 випадків Ковід-19</a></h1>
                     
@@ -584,10 +649,10 @@
     </div>
     <!-- .posts-2-1-1 -->
 
-    <div class="wrapper">
+    <div class="wrapper hide-776">
 
         <div class="posts-4">
-            <div class="title">Львів</div>
+            <div class="title">Статті</div>
             <article class="article">
                 <div class="picture">
                     <picture>

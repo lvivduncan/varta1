@@ -13,8 +13,26 @@
     z-index: 2;
 }
 
-/* фонова картинка, .picture не використовується */
-.post-primary picture 
+/* фонова картинка, .picture обнуляємо */
+.post-primary .picture.static
+{
+    position: static;
+    overflow: visible;
+    padding-top: 0;
+}
+
+@media(max-width:996px)
+{
+    /* повертаємо рут-значення */
+    .post-primary .picture.static
+    {
+        position: relative;
+        overflow: hidden;
+        padding-top: 56.25%;
+    }    
+}
+
+/* .post-primary picture 
 {
     position: absolute;
     top: 0;
@@ -29,8 +47,8 @@
 {
     object-fit: cover;
     height: 100%!important;
-}
-/* фонова картинка, .picture не використовується */
+} */
+/* фонова картинка, .picture обнуляємо */
 
 /* затемнення */
 .post-primary::before 
@@ -89,7 +107,8 @@
 {
     .post-primary .post-content h1
     {
-        font-size: 24px;
+        /* font-size: 24px; */
+        font-size: 21px;
         line-height: 24px;
         font-weight: 700;
     }

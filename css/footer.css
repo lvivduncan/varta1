@@ -19,7 +19,7 @@
     display: grid;
     /* grid-template-columns: 375px 850px; */
     grid-template-columns: 375px 1fr;
-    grid-gap: var(--gap) 75px;
+    gap: var(--gap) 75px;
     grid-template-areas: 
         'footer-left footer-right'
         'copyright copyright';
@@ -29,12 +29,27 @@
 {
     #footer .wrapper 
     {
-        display: grid;
+        /* display: grid; */
         /* grid-template-columns: 375px 850px; */
-        grid-gap: var(--gap) 75px;
+        /* gap: var(--gap) 75px; */
         grid-template-areas: 
             'footer-left footer-right'
             'copyright copyright';
+    }
+}
+
+@media(max-width:776px)
+{
+    #footer .wrapper 
+    {
+        grid-template-columns: 1fr;
+        /* display: grid; */
+        /* grid-template-columns: 375px 850px; */
+        /* gap: var(--gap) 75px; */
+        grid-template-areas: 
+            'footer-left'
+            'footer-right'
+            'copyright';
     }
 }
 
@@ -42,6 +57,14 @@
 #footer-left
 {
     grid-area: footer-left;
+}
+
+@media(max-width:776px)
+{
+    #footer-left
+    {
+        text-align: center;
+    }
 }
 
 #footer-left img 
@@ -58,6 +81,15 @@
     text-align: justify;
 }
 
+@media(max-width:500px)
+{
+    #footer-left p 
+    {
+        /* padding: 0 var(--gap); */
+        text-align: center;
+    }    
+}
+
 /* меню і правила під ним */
 #footer-right
 {
@@ -68,6 +100,14 @@
     display: flex;
     flex-direction: column;
     gap: 50px;
+}
+
+@media(max-width:500px)
+{
+    #footer-right
+    {
+        gap: var(--gap);
+    }
 }
 
 #footer-right p 
@@ -85,11 +125,27 @@
     }    
 }
 
+@media(max-width:500px)
+{
+    #footer-right p 
+    {
+        text-align: center;
+    }       
+}
+
 #footer-right nav ul
 {
     display: flex;
     gap: var(--gap);
     flex-wrap: wrap;
+}
+
+@media(max-width:500px)
+{
+    #footer-right nav ul
+    {
+        justify-content: center;
+    }    
 }
 
 #footer-right nav li
@@ -121,7 +177,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 70px;
+    min-height: 70px;
+}
+
+@media(max-width:776px)
+{
+    #copyright
+    {
+        border: none;
+        flex-direction: column;
+    }
+}
+
+@media(max-width:500px)
+{
+    #copyright
+    {
+        margin: 0 -2.5%;
+    }    
 }
 
 #copyright p 
@@ -129,6 +202,24 @@
     font-size: 14px;
     line-height: 24px;
     font-weight: 300;
+}
+
+@media(max-width:776px)
+{
+    #copyright p 
+    {
+        order: 2;
+
+        border-top: 1px solid var(--footer-border);
+        padding: var(--gap);
+        text-align: center;
+    }
+    
+    #copyright .social
+    {
+        order: 1;
+        padding: 0 0 var(--gap);
+    }
 }
 
 #copyright a:hover, 

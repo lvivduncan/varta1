@@ -9,10 +9,35 @@
     padding: 70px 0 50px;
 }
 
+@media(max-width:500px)
+{
+    .search-ads 
+    {
+        /* background: var(--red-dirty); */
+        padding: 40px 0 50px;
+    }    
+}
+
 .search-ads .wrapper 
 {
     display: grid;
-    grid-gap: var(--gap);    
+    gap: var(--gap);    
+}
+
+@media(max-width:776px)
+{
+    .search-ads .wrapper 
+    {
+        width: calc(100% - 70px);
+    }    
+}
+
+@media(max-width:500px)
+{
+    .search-ads .wrapper 
+    {
+        width: 95%;
+    }    
 }
 
 /* 4 автономні блоки -- заголовок, пошук, вивід, кнопка */
@@ -23,14 +48,12 @@
     color: var(--white);
 }
 
-
-
 /* 2. поля пошуку */
 .search-ads-header
 {
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    grid-gap: calc(var(--gap)/2*3) var(--gap); 
+    gap: calc(var(--gap)/2*3) var(--gap); 
 }
 
 @media(max-width:996px)
@@ -39,7 +62,17 @@
     {
         /* display: grid; */
         grid-template-columns: repeat(2,1fr);
-        /* grid-gap: calc(var(--gap)/2*3) var(--gap);  */
+        /* gap: calc(var(--gap)/2*3) var(--gap);  */
+    }
+}
+
+@media(max-width:500px)
+{
+    .search-ads-header
+    {
+        /* display: grid; */
+        grid-template-columns: 1fr;
+        /* gap: calc(var(--gap)/2*3) var(--gap);  */
     }
 }
 
@@ -111,7 +144,7 @@
 {
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    grid-gap: calc(var(--gap)/2*3) var(--gap);
+    gap: calc(var(--gap)/2*3) var(--gap);
 }
 
 @media(max-width:996px)
@@ -120,13 +153,31 @@
     {
         /* display: grid; */
         grid-template-columns: repeat(2,1fr);
-        /* grid-gap: calc(var(--gap)/2*3) var(--gap); */
+        /* gap: calc(var(--gap)/2*3) var(--gap); */
     }    
+}
+
+@media(max-width:500px)
+{
+    .search-ads-main
+    {
+        grid-template-columns: 1fr;
+    }      
 }
 
 .search-ads-main .article
 {
     border: 1px solid var(--red-border);
+}
+
+/* ховаємо 2 останніх */
+@media(max-width:500px)
+{
+    .search-ads-main .article:nth-last-of-type(1),
+    .search-ads-main .article:nth-last-of-type(2)
+    {
+        display: none;
+    }    
 }
 
 .search-ads-main .picture 
@@ -186,7 +237,10 @@
     color: var(--red);
 }
 
-@media(max-width:996px)
+@media(max-width:380px)
 {
-    
+    .search-ads .button 
+    {
+        width: 260px;
+    }    
 }
