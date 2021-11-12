@@ -1,0 +1,37 @@
+
+/* //////////////
+// правий блок //
+////////////// */
+
+#aside 
+{
+    background: var(--gray1);
+    padding: var(--gap) 0;
+}
+
+/* ховаємо 4 останніх артикля */
+@media(max-width:996px)
+{
+    #aside .post:nth-last-of-type(1),
+    #aside .post:nth-last-of-type(2),
+    #aside .post:nth-last-of-type(3),
+    #aside .post:nth-last-of-type(4)
+    {
+        display: none;
+    }
+}
+
+@media(max-width:776px)
+{
+    #aside
+    {
+        margin: 0 -2.5% var(--gap);
+        border-top: 1px solid var(--gray6);
+        border-bottom: 1px solid var(--gray6);
+    }
+}
+
+#aside .title 
+{
+    margin: 0 calc(var(--gap)/4*3);
+}

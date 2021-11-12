@@ -39,6 +39,10 @@
     --red-input:  linear-gradient(90deg,#aa6b64, #a56962);
 
     --white-button: linear-gradient(90deg, #fff, #cbcfd9);
+
+    --facebook: #515eb3;
+    --twitter: #6ab8ff;
+    --telegram: #389ce9;
 }
 
 html, body
@@ -58,6 +62,18 @@ hr
     border: none;
     border-top: 1px solid var(--gray2);
     margin: var(--gap) 0;
+}
+
+a
+{
+    text-decoration: underline;
+    color: var(--black);
+}
+
+a:hover,
+a:focus 
+{
+    text-decoration: none;
 }
 
 picture img,
@@ -148,6 +164,8 @@ button,
     }
 }
 /* основна шпальта */
+
+
 
 
 /* 

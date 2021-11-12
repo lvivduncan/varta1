@@ -1,0 +1,107 @@
+
+/*//////////////////////////////////
+// шаблон "article" та "category" //
+//////////////////////////////////*/
+
+/* 980-330 */
+/* широкий блок зліва, вузький справа */
+/* схоже, що такий формат буде стандартом для всіх або більшості сторінок */
+
+#page
+{
+    display: grid;
+    /* grid-template-columns: 3fr 1fr;  */
+    grid-template-columns: auto 330px; 
+    gap: var(--gap);
+}
+
+#page #content 
+{
+    padding: var(--gap) 0 0;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr;
+    gap: var(--gap) calc(var(--gap)*2);
+    grid-template-areas: 
+        'page-content-header page-content-header'    
+        'page-content-aside page-content-main'
+}
+
+#page #content header 
+{
+    grid-area: page-content-header;
+}
+
+#page #content > h1 
+{
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: bold;
+}
+
+#page #content header p
+{
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    margin: 0 0 calc(var(--gap) + 5px);
+}
+
+figure figcaption
+{
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: right;
+}
+
+#page #content aside 
+{
+    grid-area: page-content-aside;
+}
+
+/* До теми */
+.appendix
+{
+    margin: var(--gap) 0;
+}
+
+.appendix li 
+{
+    display: block;
+    margin: 0 0 calc(var(--gap) + var(--gap)/2); 
+}
+
+.appendix a 
+{
+    text-decoration: none;
+    color: var(--black);
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
+    transition: .5s;
+}
+
+.appendix a:hover,
+.appendix a:focus
+{
+    color: var(--red);
+}
+
+#page #content main 
+{
+    grid-area: page-content-main;
+}
+
+#page #content main p 
+{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    margin: 0 0 var(--gap);
+}
+
+#page #content main p strong 
+{
+    font-weight: 800;
+}
