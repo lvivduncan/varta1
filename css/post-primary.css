@@ -32,24 +32,6 @@
     }    
 }
 
-/* .post-primary picture 
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    display: block;
-    height: 100%!important;
-}
-
-.post-primary picture img 
-{
-    object-fit: cover;
-    height: 100%!important;
-} */
-/* фонова картинка, .picture обнуляємо */
-
 /* затемнення */
 .post-primary::before 
 {
@@ -107,7 +89,6 @@
 {
     .post-primary .post-content h1
     {
-        /* font-size: 24px; */
         font-size: 21px;
         line-height: 24px;
         font-weight: 700;

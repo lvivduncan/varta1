@@ -1,3 +1,4 @@
+
 /* 3 рівних анонса */
 .posts-3
 {
@@ -14,9 +15,7 @@
 {
     .posts-3
     {
-        /* display: grid; */
         grid-template-columns: repeat(2,1fr);
-        /* gap: var(--gap) calc(var(--gap)/2*3); */
         grid-template-areas: 
             'post-3-title post-3-title'
             'post-3-1 post-3-2'
@@ -27,10 +26,7 @@
 {
     .posts-3
     {
-        /* display: grid; */
-        /* grid-template-columns: repeat(3,1fr); */
         grid-template-rows: auto;
-        /* gap: var(--gap) calc(var(--gap)/2*3); */
         grid-template-areas: 
             'post-3-title post-3-title'
             'post-3-1 post-3-1'

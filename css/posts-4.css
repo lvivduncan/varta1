@@ -16,10 +16,7 @@
 {
     .posts-4
     {
-        /* margin: var(--gap) 0; */
-        /* display: grid; */
         grid-template-columns: repeat(2,1fr);
-        /* gap: var(--gap) calc(var(--gap)/2*3); */
         grid-template-areas: 
             'posts-4-title posts-4-title'
             'posts-4-1 posts-4-2'

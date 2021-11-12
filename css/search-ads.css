@@ -13,7 +13,6 @@
 {
     .search-ads 
     {
-        /* background: var(--red-dirty); */
         padding: 40px 0 50px;
     }    
 }
@@ -60,9 +59,7 @@
 {
     .search-ads-header
     {
-        /* display: grid; */
         grid-template-columns: repeat(2,1fr);
-        /* gap: calc(var(--gap)/2*3) var(--gap);  */
     }
 }
 
@@ -70,9 +67,7 @@
 {
     .search-ads-header
     {
-        /* display: grid; */
         grid-template-columns: 1fr;
-        /* gap: calc(var(--gap)/2*3) var(--gap);  */
     }
 }
 
@@ -118,18 +113,6 @@
     grid-column: 1 / -2;
 }
 
-@media(max-width:996px)
-{
-/*     .search-ads-output
-    {
-        display: flex;
-        align-items: center;
-        color: var(--white);
-        gap: 5px;
-        grid-column: 1 / -2;
-    } */
-}
-
 /* кнопка пошуку */
 .search-ads button 
 {
@@ -151,9 +134,7 @@
 {
     .search-ads-main
     {
-        /* display: grid; */
         grid-template-columns: repeat(2,1fr);
-        /* gap: calc(var(--gap)/2*3) var(--gap); */
     }    
 }
 
