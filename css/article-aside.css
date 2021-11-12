@@ -1,6 +1,6 @@
 
 /* пост у сайдбарі */
-.article-aside
+.preview
 {
     display: grid;
     grid-template-columns: 40px 1fr;
@@ -10,7 +10,7 @@
     position: relative;
 }
 
-.article-aside::before 
+.preview::before 
 {
     content: '';
     position: absolute;
@@ -23,7 +23,7 @@
     z-index: 1;
 }
 
-.article-aside time
+.preview time
 {
     font-size: 12px;
     line-height: 20px;
@@ -32,7 +32,7 @@
     text-align: center;
 }
 
-.article-aside h1 a
+.preview h1 a
 {
     font-size: 14px;
     line-height: 20px;
@@ -43,25 +43,25 @@
     transition: .5s;
 }
 
-.article-aside h1 a:hover,
-.article-aside h1 a:focus
+.preview h1 a:hover,
+.preview h1 a:focus
 {
     color: var(--red);
 }
 
 /* відступ для 1 елемента */
-.article-aside:nth-of-type(1)
+.preview:nth-of-type(1)
 {
     margin-top: var(--gap);
 }
 
 /* важливий пост, червоним */
-.article-aside.important time
+.preview.important time
 {
     color: var(--red);
 }
 
-.article-aside.important h1 a
+.preview.important h1 a
 {
     color: var(--red);
     font-weight: 800;
@@ -69,26 +69,26 @@
 /* важливий пост, червоним */
 
 /* пост з картинкою */
-.article-aside.bg
+.preview.bg
 {
     position: relative;
     display: block;
     padding: 0;
 }
 
-.article-aside.bg::before 
+.preview.bg::before 
 {
     display: none;
 }
 
 @media(max-width:996px)
 {
-    .article-aside.bg
+    .preview.bg
     {
         padding: calc(var(--gap)/4*3) 0;
     }
     
-    .article-aside.bg::before 
+    .preview.bg::before 
     {
         content: '';
         position: absolute;
@@ -101,7 +101,7 @@
         z-index: 1;
     }
 
-    .article-aside.bg .picture
+    .preview.bg .picture
     {
         padding: 0;
     }
@@ -109,25 +109,25 @@
 
 @media(max-width:776px)
 {
-    .article-aside.bg
+    .preview.bg
     {
         position: relative;
         display: block;
         padding: 0;
     }
     
-    .article-aside.bg::before 
+    .preview.bg::before 
     {
         display: none;
     }
 
-    .article-aside.bg .picture
+    .preview.bg .picture
     {
         padding-top: 56.25%;
     }
 }
 
-.article-aside.bg .picture::before
+.preview.bg .picture::before
 {
     content: '';
     position: absolute;
@@ -141,12 +141,12 @@
 
 @media(max-width:996px)
 {
-    .article-aside.bg .picture::before
+    .preview.bg .picture::before
     {
         display: none;
     }    
 
-    .article-aside.bg .picture picture
+    .preview.bg .picture picture
     {
         display: none;
     }    
@@ -154,18 +154,18 @@
 
 @media(max-width:776px)
 {
-    .article-aside.bg .picture::before
+    .preview.bg .picture::before
     {
         display: block;
     }    
 
-    .article-aside.bg .picture picture
+    .preview.bg .picture picture
     {
         display: block;
     } 
 }
 
-.article-aside.bg .post-content
+.preview.bg .post-content
 {
     position: absolute;
     bottom: var(--gap);
@@ -179,7 +179,7 @@
 
 @media(max-width:996px)
 {
-    .article-aside.bg .post-content
+    .preview.bg .post-content
     {
         position: static;
     }
@@ -187,13 +187,13 @@
 
 @media(max-width:776px)
 {
-    .article-aside.bg .post-content
+    .preview.bg .post-content
     {
         position: absolute;
     }
 }
 
-.article-aside.bg .post-content::before
+.preview.bg .post-content::before
 {
     content: '';
     position: absolute;
@@ -208,7 +208,7 @@
 
 @media(max-width:996px)
 {
-    .article-aside.bg .post-content::before
+    .preview.bg .post-content::before
     {
         display: none;
     }
@@ -216,20 +216,20 @@
 
 @media(max-width:776px)
 {
-    .article-aside.bg .post-content::before
+    .preview.bg .post-content::before
     {
         display: block;
     }
 }
 
-.article-aside.bg .post-content time
+.preview.bg .post-content time
 {
     color: var(--white);
 }
 
 @media(max-width:996px)
 {
-    .article-aside.bg .post-content time
+    .preview.bg .post-content time
     {
         color: var(--red);
     }
@@ -237,13 +237,13 @@
 
 @media(max-width:776px)
 {
-    .article-aside.bg .post-content time
+    .preview.bg .post-content time
     {
         color: var(--white);
     }
 }
 
-.article-aside.bg .post-content h1 a
+.preview.bg .post-content h1 a
 {
     color: var(--white);
     font-weight: 800;
@@ -251,7 +251,7 @@
 
 @media(max-width:996px)
 {
-    .article-aside.bg .post-content h1 a
+    .preview.bg .post-content h1 a
     {
         color: var(--red);
     }
@@ -259,7 +259,7 @@
 
 @media(max-width:776px)
 {
-    .article-aside.bg .post-content h1 a
+    .preview.bg .post-content h1 a
     {
         color: var(--white);
         font-weight: 800;

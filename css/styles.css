@@ -1,12 +1,11 @@
 @import url('./root.css');
 @import url('./header.css');
 @import url('./mobile.css');
-/* @import url('./comments.css'); */
 @import url('./service-data.css');
 @import url('./title.css');
 @import url('./article.css');
 @import url('./home-top.css');
-@import url('./post-primary.css'); /* todo: rename */
+@import url('./post-primary.css');
 @import url('./posts-3.css');
 @import url('./posts-4.css');
 @import url('./posts-2-1.css');
@@ -15,7 +14,6 @@
 @import url('./posts-2-1-1.css');
 @import url('./article-aside.css');
 @import url('./search-ads.css');
-/* @import url('./home-bottom.css'); */
 @import url('./tags.css');
 @import url('./social.css');
 @import url('./footer.css');

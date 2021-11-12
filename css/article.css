@@ -1,10 +1,10 @@
 /* окремий пост */
-.article 
+.post 
 {
     position: relative;
 }
 
-.article h1
+.post h1
 {
     font-size: 21px;
     line-height: 24px;
@@ -15,13 +15,13 @@
 /* примусово зменшую шрифт, бо на смартфоні довгі слова розпираються екран */
 @media(max-width:360px)
 {
-    .article h1
+    .post h1
     {
         font-size: 17px!important;
     }
 }
 
-.article h1 a 
+.post h1 a 
 {
     text-decoration: none;
     color: var(--black);
@@ -29,18 +29,18 @@
     transition: .5s;
 }
 
-.article h1 a:hover, 
-.article h1 a:focus 
+.post h1 a:hover, 
+.post h1 a:focus 
 {
     color: var(--red);
 }
 
-.article .picture 
+.post .picture 
 {
     margin: 0 0 var(--gap);
 }
 
-.article p 
+.post p 
 {
     font-size: 14px;
     line-height: 20px;

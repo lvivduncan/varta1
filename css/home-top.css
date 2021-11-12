@@ -85,10 +85,10 @@
 /* ховаємо 4 останніх артикля */
 @media(max-width:996px)
 {
-    #home-top aside article:nth-last-of-type(1),
-    #home-top aside article:nth-last-of-type(2),
-    #home-top aside article:nth-last-of-type(3),
-    #home-top aside article:nth-last-of-type(4)
+    #home-top aside .post:nth-last-of-type(1),
+    #home-top aside .post:nth-last-of-type(2),
+    #home-top aside .post:nth-last-of-type(3),
+    #home-top aside .post:nth-last-of-type(4)
     {
         display: none;
     }

@@ -43,24 +43,24 @@
     grid-area: post-3-title;
 }
 
-.posts-3 article:nth-of-type(1)
+.posts-3 .post:nth-of-type(1)
 {
     grid-area: post-3-1;
 }
 
-.posts-3 article:nth-of-type(2)
+.posts-3 .post:nth-of-type(2)
 {
     grid-area: post-3-2;
 }
 
-.posts-3 article:nth-of-type(3)
+.posts-3 .post:nth-of-type(3)
 {
     grid-area: post-3-3;
 }
 
 @media(max-width:996px)
 {
-    .posts-3 article:nth-of-type(3)
+    .posts-3 .post:nth-of-type(3)
     {
         display: none;
     }    
@@ -68,13 +68,13 @@
 
 @media(max-width:500px)
 {
-    .posts-3 article:nth-of-type(3)
+    .posts-3 .post:nth-of-type(3)
     {
         display: block;
     }   
     
-    .posts-3 article:nth-of-type(2) h1,
-    .posts-3 article:nth-of-type(3) h1
+    .posts-3 .post:nth-of-type(2) h1,
+    .posts-3 .post:nth-of-type(3) h1
     {
         font-size: 18px;
         line-height: 21px;
