@@ -146,7 +146,7 @@
     }      
 }
 
-.search-ads-main .article
+.search-ads-main .post
 {
     border: 1px solid var(--red-border);
 }
@@ -154,8 +154,8 @@
 /* ховаємо 2 останніх */
 @media(max-width:500px)
 {
-    .search-ads-main .article:nth-last-of-type(1),
-    .search-ads-main .article:nth-last-of-type(2)
+    .search-ads-main .post:nth-last-of-type(1),
+    .search-ads-main .post:nth-last-of-type(2)
     {
         display: none;
     }    
