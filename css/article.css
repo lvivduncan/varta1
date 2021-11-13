@@ -13,6 +13,14 @@
     gap: var(--gap);
 }
 
+@media(max-width:776px)
+{
+    #article
+    {
+        grid-template-columns: 1fr; 
+    }    
+}
+
 #article-content 
 {
     padding: var(--gap) 0 0;
@@ -23,6 +31,18 @@
         'article-header article-header'    
         'article-aside article-main'
         'article-posts article-posts'
+}
+
+@media(max-width:996px)
+{
+    #article-content 
+    {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'article-header'    
+            'article-main'
+            'article-posts'
+    }    
 }
 
 #article-content header 
@@ -37,12 +57,32 @@
     font-weight: bold;
 }
 
+@media(max-width:776px)
+{
+    #article-content header h1
+    {
+        font-size: 25px;
+        line-height: 30px;
+        font-weight: 700;
+    }
+}
+
 #article-content header p
 {
     font-size: 18px;
     line-height: 24px;
     font-weight: 600;
     margin: 0 0 calc(var(--gap) + 5px);
+}
+
+@media(max-width:776px)
+{
+    #article-content header p
+    {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 700;
+    }
 }
 
 figure figcaption
@@ -53,9 +93,25 @@ figure figcaption
     text-align: right;
 }
 
+@media(max-width:776px)
+{
+    figure figcaption
+    {
+        text-align: center;
+    }    
+}
+
 #article-content aside 
 {
     grid-area: article-aside;
+}
+
+@media(max-width:996px)
+{
+    #article-content aside 
+    {
+        display: none;
+    }    
 }
 
 /* До теми */
@@ -103,7 +159,7 @@ figure figcaption
 
 #article-content main p strong 
 {
-    font-weight: 800;
+    font-weight: 700;
 }
 
 #article-content .posts-3
@@ -114,4 +170,24 @@ figure figcaption
     padding: var(--gap) 0;
     border-top: 1px solid var(--gray1);
     border-bottom: 1px solid var(--gray1);
+}
+
+@media(max-width:776px)
+{
+    #article-content .posts-3
+    {
+        grid-template-areas:
+            'post-3-title post-3-title'
+            'post-3-1 post-3-2'
+    }
+}
+
+@media(max-width:500px)
+{
+    #article-content .posts-3
+    {
+        grid-template-areas:
+            'post-3-title post-3-title'
+            'post-3-1 post-3-2'
+    }
 }
