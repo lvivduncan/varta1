@@ -34,6 +34,7 @@
     padding-left: calc(var(--gap)*2);
     font-size: 12px;
     line-height: 20px;
+    font-weight: 700;
 }
 
 .share-buttons a::after

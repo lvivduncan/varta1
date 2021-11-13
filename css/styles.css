@@ -21,8 +21,10 @@
 @import url('./tags.css');
 @import url('./share-buttons.css');
 
-@import url('./page.css');
-
+/* @import url('./page.css'); */
+@import url('./article.css');
+@import url('./blockquote.css');
+@import url('./levus-touch-gallery.css');
 
 
 @import url('./footer.css');

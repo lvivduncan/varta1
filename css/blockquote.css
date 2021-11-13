@@ -1,0 +1,44 @@
+
+/* /////////////////////////////////////////////////////////
+// цитата можливо буде викристовуватися у різних шаблонах //
+//////////////////////////////////////////////////////////*/
+
+blockquote
+{
+    margin: 50px 0 40px;
+    padding: calc(var(--gap)*2);
+    background: var(--gray1);
+    text-align: center;
+    position: relative;
+}
+
+blockquote::before
+{
+    content: '';
+    display: block;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAhBAMAAABdKiSrAAAAMFBMVEUAAACZFgeZFgeZFgeZFgeZFgeZFgeZFgeZFgeZFgeZFgeZFgeZFgeZFgeZFgeZFgdxUaIaAAAAD3RSTlMAdxHuVTPdzKqIIpm7ZkTDMFlVAAABKElEQVQoz0WPsUoDQRRFryHBZI0iNpZGAraCkHoDFmKVBX/AQsFGlnxBLOz3D9zSxiJYWlmn0V8Ju66uUW72Zd68OdXhzpuZ+wAczziFckk+Qdhlw78LX8QXYkcU5qJRKlokwBY3rCQ9cT4ChnTs2zVWZjwDWrFNzNSWQJs24c+/7QuyBD2DkNZIvY6b5nYvo33R8VpgElL7meiHNEzIlpb2LMWz7JuG5e7kXeCQdZJLB6CTc9qSDg1uKIFC/qjlLKA0s0vVjCs1af2rGrNUk73f7fwaSpf8dNYzA05ZqQ2ljNUpzb6sQswHZ5FsZs9WA2fboRcmHFnbeWhb6JI7rOG54q2+/8ExlDb/9NVzLqBEme99wRtrlfPV2R7v4enzDZo+wugeqKwBWtIsk7cTA50AAAAASUVORK5CYII=');
+    position: absolute;
+    top: -14px;
+    left: calc(50% - 21px);
+    z-index: 1;
+    width: 42px;
+    height: 33px;
+}
+
+blockquote picture 
+{
+    width: 120px;
+    height: 120px;
+    display: block;
+    margin: auto;
+}
+
+blockquote picture img 
+{
+    border-radius: 50%;
+}
+
+blockquote small 
+{
+    display: block;
+}
