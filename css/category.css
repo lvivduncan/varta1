@@ -10,6 +10,14 @@
     gap: var(--gap);
 }
 
+@media(max-width:776px)
+{
+    #category 
+    {
+        grid-template-columns: 1fr;
+    }    
+}
+
 #category-content 
 {
     padding: var(--gap) 0;
@@ -18,12 +26,21 @@
     gap: var(--gap);
 }
 
-@media(max-width:776px)
+@media(max-width:996px)
 {
     #categories
     {
         border-top: 1px solid var(--gray1);
         border-bottom: 1px solid var(--gray1);
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: var(--gap);
+        margin-bottom: auto;
+    }
+
+    #categories .pagination 
+    {
+        grid-column: 1/-1;
     }
 }
 
@@ -37,6 +54,14 @@
     padding: var(--gap) var(--gap) 15px 110px;
     border-bottom: 1px solid var(--gray1);
     position: relative;
+}
+
+@media(max-width:996px)
+{
+    #categories .post 
+    {
+        display: none;
+    }
 }
 
 /* бордер для першого */
@@ -59,10 +84,36 @@
         'categories-post-picture categories-post-p'
 }
 
+@media(max-width:996px)
+{
+    #categories .post:nth-child(3n+3) 
+    {
+        padding: 0;
+        display: grid;
+
+        grid-template-columns:1fr;
+        grid-template-areas: 
+            'categories-post-picture'
+            'categories-post-h1'
+            'categories-post-p' 
+    }
+}
+
 #categories .post .service-data
 {
     display: inline;
     margin: 0;
+}
+
+@media(max-width:996px)
+{
+    #categories .post .service-data
+    {
+        display: flex;
+        /* align-items: center; */
+        /* gap: var(--gap); */
+        margin: calc(var(--gap)/4) 0;
+    }    
 }
 
 /* видираємо час і розміщуємо зліва */
@@ -71,6 +122,14 @@
     position: absolute;
     top: calc(var(--gap) + 4px);
     left: var(--gap);
+}
+
+@media(max-width:996px)
+{
+    #categories .post time
+    {
+        position: static;
+    }    
 }
 
 #categories .post .picture
@@ -83,7 +142,15 @@
     grid-area: categories-post-picture;
 
     display: block;
-    margin: 0;
+    margin: 0 0 auto;
+}
+
+@media(max-width:996px)
+{
+    #categories .post:nth-child(3n+3) .picture 
+    {
+        margin: 0 0 var(--gap);
+    }    
 }
 
 #categories .post h1
@@ -95,10 +162,7 @@
     flex-wrap: wrap;
 }
 
-/* #categories .post:nth-child(3n+3) h1 
-{
-    margin: 0 0 var(--gap);
-} */
+
 
 #categories .post h1 a
 {
