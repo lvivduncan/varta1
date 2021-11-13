@@ -7,7 +7,8 @@
 {
     display: grid;
     /* 960*330 */
-    grid-template-columns: 2fr 1fr;
+    /* grid-template-columns: 2fr 1fr; */
+    grid-template-columns: 1fr 330px;
     grid-template-rows: repeat(4,auto);
     gap: 0 var(--gap);
     grid-template-areas:

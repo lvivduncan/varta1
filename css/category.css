@@ -1,0 +1,120 @@
+
+/*/////////////////////
+// шаблон "category" //
+/////////////////////*/
+
+#category 
+{
+    display: grid;
+    grid-template-columns: 1fr 330px;
+    gap: var(--gap);
+}
+
+#category-content 
+{
+    padding: var(--gap) 0;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: var(--gap);
+}
+
+@media(max-width:776px)
+{
+    #categories
+    {
+        border-top: 1px solid var(--gray1);
+        border-bottom: 1px solid var(--gray1);
+    }
+}
+
+/* 
+пости без фото і без короткої анотації
+але кожен 3 пост має фото та анотацію
+*/
+
+#categories .post 
+{
+    padding: var(--gap) var(--gap) 15px 110px;
+    border-bottom: 1px solid var(--gray1);
+    position: relative;
+}
+
+/* бордер для першого */
+#categories .post:first-child
+{
+    border-top: 1px solid var(--gray1);
+}
+
+/* 3 пост має картинку та анотацію */
+#categories .post:nth-child(3n+3) 
+{
+    padding: var(--gap) var(--gap) var(--gap) 110px;
+
+    background: var(--gray1);
+    display: grid;
+    gap: 0 var(--gap);
+    grid-template-columns: 150px 1fr;
+    grid-template-areas: 
+        'categories-post-picture categories-post-h1'
+        'categories-post-picture categories-post-p'
+}
+
+#categories .post .service-data
+{
+    display: inline;
+    margin: 0;
+}
+
+/* видираємо час і розміщуємо зліва */
+#categories .post time
+{
+    position: absolute;
+    top: calc(var(--gap) + 4px);
+    left: var(--gap);
+}
+
+#categories .post .picture
+{
+    display: none;
+}
+
+#categories .post:nth-child(3n+3) .picture 
+{
+    grid-area: categories-post-picture;
+
+    display: block;
+    margin: 0;
+}
+
+#categories .post h1
+{
+    grid-area: categories-post-h1;
+
+    display: flex;
+    gap: 0 var(--gap);
+    flex-wrap: wrap;
+}
+
+/* #categories .post:nth-child(3n+3) h1 
+{
+    margin: 0 0 var(--gap);
+} */
+
+#categories .post h1 a
+{
+    display: inline;
+}
+
+#categories .post p
+{
+    display: none;
+}
+
+#categories .post:nth-child(3n+3) p 
+{
+    grid-area: categories-post-p;
+
+    display: block;
+    /* margin: var(--gap) 0 0; */
+    /* margin: 10px 0 0; */
+}

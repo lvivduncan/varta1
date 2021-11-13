@@ -9,8 +9,7 @@
 #article
 {
     display: grid;
-    /* grid-template-columns: 3fr 1fr;  */
-    grid-template-columns: auto 330px; 
+    grid-template-columns: 1fr 330px; 
     gap: var(--gap);
 }
 
@@ -19,7 +18,6 @@
     padding: var(--gap) 0 0;
     display: grid;
     grid-template-columns: 200px 1fr;
-    /* grid-template-rows: auto 1fr; */
     gap: var(--gap) calc(var(--gap)*2);
     grid-template-areas: 
         'article-header article-header'    

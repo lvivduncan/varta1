@@ -38,7 +38,22 @@ blockquote picture img
     border-radius: 50%;
 }
 
+blockquote p 
+{
+    font-size: 18px;
+    line-height: 24px;
+}
+
+blockquote strong 
+{
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+}
+
 blockquote small 
 {
     display: block;
+    font-size: 14px;
+    line-height: 18px;
 }
