@@ -9,10 +9,5 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#view section
-{
-    text-align: center;
-    padding: 0 var(--gap);
+    flex-direction: column;
 }
