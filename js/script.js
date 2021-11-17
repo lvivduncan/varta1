@@ -3,14 +3,16 @@
 // клік на кнопці -- відкриває форму пошуку
 document.getElementById('search-button').addEventListener('click', () => {
     
-    document.getElementById('search-form').classList.add('active')
-    document.getElementById('search-button').classList.add('hide')
+    document.getElementById('search-form').className = 'active'
+    document.getElementById('search-button').className = 'hide'
+    document.getElementById('search-button-close').className = 'active'
 })
 
 document.getElementById('search-button-close').addEventListener('click', () => {
 
-    document.getElementById('search-form').classList.remove('active')
-    document.getElementById('search-button').classList.remove('hide')
+    document.getElementById('search-form').className = ''
+    document.getElementById('search-button').className = ''
+    document.getElementById('search-button-close').className = ''
 })
 
 // показати мобільне меню
