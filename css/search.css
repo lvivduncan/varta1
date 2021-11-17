@@ -1,0 +1,18 @@
+
+/* //////////////
+// search page //
+////////////// */
+
+#search form 
+{
+    margin: var(--gap);
+    display: flex;
+}
+
+#search form input[type="text"] 
+{
+    padding: 0 var(--gap);
+    outline: none;
+    border: 1px solid var(--gray2);
+    width: 100%;
+}
