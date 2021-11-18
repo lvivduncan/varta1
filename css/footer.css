@@ -71,7 +71,7 @@
     font-size: 14px;
     line-height: 18px;
     color: var(--gray6);
-    text-align: justify;
+    /* text-align: justify; */
 }
 
 @media(max-width:500px)

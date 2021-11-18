@@ -126,6 +126,7 @@
 {
     display: flex;
     gap: 20px;
+    overflow-x: scroll;
 }
 
 #nav li 
