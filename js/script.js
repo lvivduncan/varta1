@@ -8,6 +8,7 @@ document.getElementById('search-button').addEventListener('click', () => {
     document.getElementById('search-button-close').className = 'active'
 })
 
+// закриваємо пошук по кліку на кнопку закриття (червоний хрестик)
 document.getElementById('search-button-close').addEventListener('click', () => {
 
     document.getElementById('search-form').className = ''
@@ -36,4 +37,17 @@ document.addEventListener('keydown', event =>{
     }
 })
 
-//17-11-21
+// додаємо скрол до меню на мобільному
+if(isTouchDevice()){
+
+    document.querySelector('#nav ul').className = 'scroll'
+} else {
+
+    document.querySelector('#nav ul').className = ''
+}
+
+function isTouchDevice() {
+    return (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
+}
+
+//18-11-21

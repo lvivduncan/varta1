@@ -126,8 +126,13 @@
 {
     display: flex;
     gap: 20px;
-    overflow-x: scroll;
 }
+
+/* прокрутка тільки на мобільному девайсі */
+#nav ul.scroll 
+{
+    overflow-x: scroll;
+}   
 
 #nav li 
 {
