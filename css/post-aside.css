@@ -165,6 +165,12 @@
     } 
 }
 
+.preview.bg + .preview.bg
+{
+    margin-top: var(--gap);
+}
+
+
 .preview.bg .post-content
 {
     position: absolute;
