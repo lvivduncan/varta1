@@ -1,53 +1,46 @@
 // 5-11-2021
 
 // клік на кнопці -- відкриває форму пошуку
-document.getElementById('search-button').addEventListener('click', () => {
-    
-    document.getElementById('search-form').className = 'active'
-    document.getElementById('search-button').className = 'hide'
-    document.getElementById('search-button-close').className = 'active'
+getID("search-button").addEventListener("click", () => {
+    getID("search-form").className = "active"
+    getID("search-button").className = "hide"
+    getID("search-button-close").className = "active"
 })
 
 // закриваємо пошук по кліку на кнопку закриття (червоний хрестик)
-document.getElementById('search-button-close').addEventListener('click', () => {
-
-    document.getElementById('search-form').className = ''
-    document.getElementById('search-button').className = ''
-    document.getElementById('search-button-close').className = ''
+getID("search-button-close").addEventListener("click", () => {
+    getID("search-form").className = ""
+    getID("search-button").className = ""
+    getID("search-button-close").className = ""
 })
 
 // показати мобільне меню
-document.getElementById('nav-button').addEventListener('click', () => {
-
-    document.getElementById('mobile').className = 'active'
+getID("nav-button").addEventListener("click", () => {
+    getID("mobile").className = "active"
 })
 
 // закриваємо мобільне меню по кліку на кнопку з хрестиком
-document.getElementById('mobile-button').addEventListener('click', () => {
-
-    document.getElementById('mobile').className = ''
+getID("mobile-button").addEventListener("click", () => {
+    getID("mobile").className = ""
 })
 
 // закриваємо мобільне меню, натиснувши ескейп
-document.addEventListener('keydown', event =>{
+document.addEventListener("keydown", (event) => {
+    if (event.code === "Escape" || event.key === "Escape") {
+        getID("mobile").className = ""
 
-    if(event.code === 'Escape' || event.key === 'Escape'){
-
-        document.getElementById('mobile').className = ''
+        getID("search-form").className = ""
+        getID("search-button").className = ""
+        getID("search-button-close").className = ""
     }
 })
 
-// додаємо скрол до меню на мобільному
-if(isTouchDevice()){
-
-    document.querySelector('#nav ul').className = 'scroll'
-} else {
-
-    document.querySelector('#nav ul').className = ''
+function getID(selector) {
+    return document.getElementById(selector)
 }
 
-function isTouchDevice() {
-    return (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
+function $(selector) {
+    return document.querySelector(selector)
 }
 
-//18-11-21
+// 11-01-22
