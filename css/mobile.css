@@ -148,3 +148,11 @@
     height: var(--gap);
     cursor: pointer;
 }
+
+@media(max-width:500px)
+{
+    #mobile-button
+    {
+        display: none;
+    }
+}

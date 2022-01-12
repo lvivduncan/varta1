@@ -23,6 +23,8 @@ getID("nav-button").addEventListener("click", () => {
     const cover = document.createElement("div")
     cover.id = "cover"
     body.append(cover)
+    // <500 міняємо на хрестик
+    getID("nav-button").className = "active"
 })
 
 // закриваємо мобільне меню по кліку на кнопку з хрестиком
@@ -30,6 +32,8 @@ getID("mobile-button").addEventListener("click", () => {
     getID("mobile").className = ""
     body.className = ""
     cover.remove()
+    // <500 міняємо на хрестик
+    getID("nav-button").className = ""
 })
 
 document.addEventListener("click", (event) => {
@@ -37,6 +41,8 @@ document.addEventListener("click", (event) => {
         getID("mobile").className = ""
         body.className = ""
         cover.remove()
+        // <500 міняємо на хрестик
+        getID("nav-button").className = ""
     }
 })
 
