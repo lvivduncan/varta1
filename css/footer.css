@@ -218,4 +218,11 @@
 #copyright a:focus 
 {
     text-decoration: underline;
-} 
+}
+
+/* цопірайт */
+#copyright svg
+{
+    position: relative;
+    top: 7px
+}
