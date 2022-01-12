@@ -3,6 +3,24 @@
 // мобільне меню на всю ширину //
 ////////////////////////////// */
 
+@media(max-width:500px)
+{
+    body.fixed
+    {
+        overflow: hidden;
+    }    
+}
+
+#cover
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 4;
+}
+
 #mobile
 {
     position: absolute;
@@ -14,6 +32,16 @@
     display: none;
 }
 
+@media(max-width:500px)
+{
+    #mobile
+    {
+        position: fixed;
+        width: 300px;
+        height: 100vh;
+    }
+}
+
 #mobile.active
 {
     display: block;
@@ -23,7 +51,6 @@
 {
     border-bottom: 1px solid var(--gray2);
     position: relative;
-    /* margin: -20px 0 0; */
 }
 
 #mobile-logo
@@ -76,6 +103,10 @@
     #mobile-nav
     {
         padding: 19px 21px 33px;
+        
+        grid-template-columns: 1fr;
+        overflow-y: scroll;
+        height: 100vh;
     }
 }
 

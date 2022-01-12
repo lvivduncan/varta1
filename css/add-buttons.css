@@ -1,0 +1,143 @@
+/* /////////////////////////////////////////
+// додаткові кнопки справа та зліва внизу //
+///////////////////////////////////////// */
+
+/* todo: додати ховер і підказку */
+
+#button-share,
+#button-mail
+{
+    position: fixed;
+    bottom: var(--gap);
+    z-index: 99;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(221,221,221,1) 100%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: imageAnimation 11.2s linear infinite
+}
+
+#button-share:hover,
+#button-mail:hover{
+    animation: none;
+}
+
+#button-mail
+{
+    animation-duration: 14.3s;
+}
+
+@media(max-width:776px)
+{
+    #button-share,
+    #button-mail
+    {
+        display: none;
+    }
+}
+
+#button-share
+{
+    left: var(--gap);
+}
+
+#button-share::before,
+#button-mail::before
+{
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+#button-share::before
+{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23991607' viewBox='0 0 16 16'%3E%3Cpath d='M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z'/%3E%3C/svg%3E");
+}
+
+#button-share:hover::before
+{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 16 16'%3E%3Cpath d='M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z'/%3E%3C/svg%3E");
+}
+
+#button-mail
+{
+    right: var(--gap);
+}
+
+#button-mail::before
+{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23991607' viewBox='0 0 16 16'%3E%3Cpath d='M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z'/%3E%3C/svg%3E");
+}
+
+#button-mail:hover::before
+{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 16 16'%3E%3Cpath d='M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z'/%3E%3C/svg%3E");
+}
+
+/* /////////////////////
+// підказка по ховеру //
+///////////////////// */
+
+#button-share::after,
+#button-mail::after
+{
+    content: '';
+    position: absolute;
+    padding: 0 5px;
+    background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(221,221,221,1) 100%);
+    font-size: 14px;
+    content: attr(data-title);
+    white-space: nowrap;
+    visibility: hidden;
+}
+
+#button-share::after
+{
+    top: calc(50% - 26px);
+    right: calc(-100% - 38px);
+}
+
+#button-mail::after
+{
+    top: calc(50% - 26px);
+    left: calc(-200% - 44px);
+}
+
+#button-share:hover::after,
+#button-mail:hover::after
+{
+    visibility: visible;
+} 
+
+@keyframes imageAnimation
+{
+    0%
+    {}
+    40%
+    {}
+    80%
+    {
+        transform: rotateY(0)
+    }
+    90%
+    {
+        transform: rotateY(180deg)
+    }
+    100%
+    {
+        transform: rotate(360px);
+    }
+}
+
+/* ////////////////////////////////////////
+// поки що цей батон має бути прихований //
+//////////////////////////////////////// */
+#button-mail
+{
+    display: none;
+}
