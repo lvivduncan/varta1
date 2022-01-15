@@ -27,6 +27,10 @@
     color: var(--black);
     display: block;
     transition: .5s;
+    /* костиль */
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
 }
 
 .post h1 a:hover, 

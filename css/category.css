@@ -162,7 +162,17 @@
     flex-wrap: wrap;
 }
 
+@media(max-width:500px)
+{
+    #categories .post h1
+    {
+        font-size: 18px;
+        line-height: 21px;
+        /* white-space: pre-wrap; */
 
+
+    }    
+}
 
 #categories .post h1 a
 {
