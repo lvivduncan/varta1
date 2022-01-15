@@ -190,4 +190,10 @@ figure figcaption
             'post-3-title post-3-title'
             'post-3-1 post-3-2'
     }
+
+    /* на головній відображається, а в окремій новині має все одно ховатися */
+    #article-content .posts-3 .post:nth-of-type(3)
+    {
+        display: none;
+    }
 }
