@@ -5,7 +5,8 @@
 /* todo: додати ховер і підказку */
 
 #button-share,
-#button-mail
+#button-mail,
+#button-share-mobile
 {
     position: fixed;
     bottom: var(--gap);
@@ -22,7 +23,9 @@
 }
 
 #button-share:hover,
-#button-mail:hover{
+#button-mail:hover,
+#button-share-mobile:hover
+{
     animation: none;
 }
 
@@ -40,13 +43,15 @@
     }
 }
 
-#button-share
+#button-share,
+#button-share-mobile
 {
     left: var(--gap);
 }
 
 #button-share::before,
-#button-mail::before
+#button-mail::before,
+#button-share-mobile::before
 {
     content: '';
     display: block;
@@ -54,12 +59,14 @@
     height: 24px;
 }
 
-#button-share::before
+#button-share::before,
+#button-share-mobile::before
 {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23991607' viewBox='0 0 16 16'%3E%3Cpath d='M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z'/%3E%3C/svg%3E");
 }
 
-#button-share:hover::before
+#button-share:hover::before,
+#button-share-mobile:hover::before
 {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 16 16'%3E%3Cpath d='M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z'/%3E%3C/svg%3E");
 }
