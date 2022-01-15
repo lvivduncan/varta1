@@ -132,7 +132,7 @@
     flex-wrap: wrap;
 }
 
-@media(max-width:500px)
+@media(max-width:776px)
 {
     #footer-right nav ul
     {
