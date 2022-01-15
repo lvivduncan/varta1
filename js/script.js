@@ -1,5 +1,7 @@
 // 5-11-2021
 {
+    const initElements = []
+
     const body = document.body
 
     // клік на кнопці -- відкриває форму пошуку
@@ -68,60 +70,22 @@
             window.open(url, "sharer", options)
         })
 
+    // Share button
+    if ( getID('button-share-mobile') ) {
 
+        getID('button-share-mobile')?.addEventListener('click', () => {
 
-
-
-
-    // const share = getID('button-share');
-    const shareMobile = getID('button-share-mobile')
-
-    if (shareMobile !== null) {
-
-        // // затемнення фону
-        // const wrapperModal = document.createElement('div');
-        // wrapperModal.classList.add('wrapper-modal');
-        // body.append(wrapperModal);
-
-        // body.className = "fixed"
-        const cover = document.createElement("div")
-        cover.id = "cover"
-        body.append(cover)
-
-        const closeModal = () => {
-            // share.classList.remove('modal');
-            // wrapperModal.classList.remove('show');
-            body.className = ""
-            cover.remove()
-        }
-
-        cover.addEventListener('click', () => closeModal())
-
-        shareMobile?.addEventListener('click', () => {
-
-            if (navigator.share){
+            if (navigator.share) {
                 navigator.share({
                     'url' : document.querySelector('meta[property="og:url"]').content,
                     'title' : document.querySelector('meta[property="og:title"]').content,
-                }).then().catch(console.error)
+                }).then().catch(console.error);
             }
-        })
+        });
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
     function getID(selector) {
         return document.getElementById(selector)
     }
 }
-// 12-01-22
+// 15-01-22
