@@ -106,7 +106,7 @@
         
         grid-template-columns: 1fr;
         overflow-y: scroll;
-        height: 100vh;
+        height: calc(100vh - 65px);
     }
 }
 
