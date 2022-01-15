@@ -196,4 +196,12 @@ figure figcaption
     {
         display: none;
     }
+
+    /* на головній відображається заголовок 1 поста більшим шрифтом */
+    #article-content .posts-3 .post:nth-of-type(1) h1,
+    #article-content .posts-3 .post:nth-of-type(2) h1,
+    #article-content .posts-3 .post:nth-of-type(3) h1
+    {
+        font-size: 18px;
+    }
 }
