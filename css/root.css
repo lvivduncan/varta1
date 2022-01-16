@@ -171,3 +171,26 @@ iframe
 {
     max-width: 100%!important;
 }
+
+.desktop-hide
+{
+    display: block;
+}
+
+.mobile-hide
+{
+    display: none;
+}
+
+@media(max-width:776px)
+{
+    .desktop-hide
+    {
+        display: none
+    }
+
+    .mobile-hide
+    {
+        display: block
+    }    
+}
