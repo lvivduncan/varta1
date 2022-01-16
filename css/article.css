@@ -11,6 +11,7 @@
     display: grid;
     grid-template-columns: 1fr 330px; 
     gap: var(--gap);
+    align-items: start;
 }
 
 @media(max-width:776px)
