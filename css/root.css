@@ -163,13 +163,11 @@ button,
 }
 /* основна шпальта */
 
+/*
+// special add varta1.com.ua
+*/
 
-
-
-/* 
-TODO: 
-- іконка коментаря, 
-- селекти "пошук оголошень"
-
-- button bottom
- */
+iframe
+{
+    max-width: 100%!important;
+}
