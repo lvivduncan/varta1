@@ -67,7 +67,56 @@
 			</style></noscript
 		>
 
-		<style amp-custom></style>
+		<style amp-custom>
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+			:root {
+				--white: #fff;
+				--red: #991607;
+				/* --red-cross: #ff0000; */
+				--black: #000;
+				--red-dirty: linear-gradient(90deg, #97473e, #723832);
+				--red-border: #ad7a75;
+				/* search-ads border */
+				--gray1: #f6f7f8;
+				/* aside bg */
+				--gray2: #eeeff1;
+				/* border */
+				--gray3: #5d595b;
+				--gray4: #e6e6e6;
+				/* лінія між постами в асайді */
+				--gray5: #999;
+				/* date */
+				--footer-bg: #434a54;
+				--footer-border: #656b73;
+				--gray6: #eeeff1;
+				/* примітка футера */
+				--bg-nav: #191919;
+				--gap: 20px;
+				/* мітка, кнопка */
+				--red-gradient: linear-gradient(320deg, #5d1f17, #ae1201);
+				/* поля у блоці "пошук оголошень" */
+				--red-input: linear-gradient(90deg, #aa6b64, #a56962);
+				--white-button: linear-gradient(90deg, #fff, #cbcfd9);
+				--facebook: #515eb3;
+				--twitter: #6ab8ff;
+				--telegram: #389ce9;
+			}
+			.wrapper {
+				width: 95%;
+				margin: auto;
+			}
+			.title {
+				color: var(--red);
+				text-transform: uppercase;
+				font-weight: bold;
+				font-size: 24px;
+				line-height: 18px;
+			}
+		</style>
 
 		<meta name="description" content="varta 1 - article" />
 		<link rel="stylesheet" href="css/styles.css" />
@@ -118,93 +167,6 @@
 			</header>
 		</div>
 		<!-- #header -->
-
-		<div id="mobile">
-			<div class="wrapper">
-				<header id="mobile-header">
-					<a href="#" title="varta 1" id="mobile-logo">
-						<picture>
-							<amp-img
-								src="images/logo-header.png"
-								alt=""
-								layout="responsive"
-								width="259"
-								height="104"
-							></amp-img>
-						</picture>
-					</a>
-
-					<div id="mobile-button"></div>
-				</header>
-				<nav id="mobile-nav">
-					<ul>
-						<li>
-							<a href="#"><strong>Новини</strong></a>
-						</li>
-						<li><a href="#">Головне</a></li>
-						<li><a href="#">Львів</a></li>
-						<li><a href="#">Політика</a></li>
-						<li><a href="#">Світ</a></li>
-						<li><a href="#">Коронавірус</a></li>
-						<li><a href="#">Економіка</a></li>
-						<li><a href="#">Кримінал</a></li>
-						<li><a href="#">Здоров'я</a></li>
-						<li><a href="#">Спорт</a></li>
-						<li><a href="#">Технології</a></li>
-						<li><a href="#">Курйози</a></li>
-						<li><a href="#">Місця</a></li>
-						<li><a href="#">Фоторепортажі</a></li>
-					</ul>
-					<ul>
-						<li>
-							<a href="#"><strong>Архів</strong></a>
-						</li>
-						<li><a href="#">Drozdov</a></li>
-						<li><a href="#">Правда у Христі</a></li>
-						<li><a href="#">Правова р[Е]волюція</a></li>
-						<li><a href="#">Наголо</a></li>
-						<li><a href="#">Антикриза</a></li>
-						<li><a href="#">Реальний футбол</a></li>
-						<li><a href="#">Культурний блог</a></li>
-						<li><a href="#">Наголос</a></li>
-					</ul>
-					<ul>
-						<li>
-							<a href="#"><strong>Телепроєкти</strong></a>
-						</li>
-						<li><a href="#">Пряма мова Львова</a></li>
-						<li><a href="#">Говорить Великий Львів</a></li>
-						<li><a href="#">Народне Толк-Шоу</a></li>
-						<li><a href="#">Ген українців</a></li>
-						<li><a href="#">Юркевич. Акценти</a></li>
-						<li><a href="#">Теорія правди</a></li>
-						<li><a href="#">Формула здоров'я</a></li>
-						<li><a href="#">Все можливо</a></li>
-						<li><a href="#">Отакої</a></li>
-						<li><a href="#">Без гриму</a></li>
-						<li><a href="#">Хвилина правди</a></li>
-					</ul>
-					<ul>
-						<li>
-							<a href="#"><strong>Телепрограма</strong></a>
-						</li>
-						<li>
-							<a href="#"><strong>Обличчя медія</strong></a>
-						</li>
-						<li>
-							<a href="#"><strong>Наживо</strong></a>
-						</li>
-						<li>
-							<a href="#"><strong>Блоги</strong></a>
-						</li>
-						<li><a href="#">Про нас</a></li>
-						<li><a href="#">Контакти</a></li>
-						<li><a href="#">Реклама</a></li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-		<!-- мобільне меню -->
 
 		<div class="wrapper">
 			<div id="article">
@@ -343,7 +305,9 @@
 							додаткову послугу.
 						</p>
 
-						<figure>
+						<!-- todo: add gallery -->
+
+						<!-- 						<figure>
 							<div class="levus-touch-gallery">
 								<div class="slides">
 									<ul>
@@ -459,7 +423,7 @@
 								Лоукостер Ryanair відкрив продаж на прямий рейс
 								Львів-Манчестер
 							</figcaption>
-						</figure>
+						</figure> -->
 					</main>
 
 					<div class="posts-3">
@@ -790,9 +754,7 @@
 			<div class="wrapper">
 				<div id="footer-left">
 					<a href="#" title="varta 1">
-						<!-- <span class="picture"> -->
 						<picture>
-							<!-- <amp-img src="images/logo-footer.jpg" alt=""> -->
 							<amp-img
 								src="images/logo-footer.png"
 								alt=""
@@ -801,7 +763,6 @@
 								height="137"
 							></amp-img>
 						</picture>
-						<!-- </span> -->
 					</a>
 					<p>
 						Портал оперативних новин Varta1 був створений на тлі
@@ -933,13 +894,7 @@
 			</div>
 		</footer>
 
-		<div id="button-share" data-title="Поширити"></div>
-
+		<!-- todo: change to amp js -->
 		<div id="button-share-mobile"></div>
-
-		<div id="button-mail" data-title="Повідомити новину"></div>
-
-		<!-- <script src="js/levus-touch-gallery.js"></script> -->
-		<!-- <script src="js/script.js"></script> -->
 	</body>
 </html>

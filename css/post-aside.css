@@ -170,6 +170,11 @@
     margin-top: var(--gap);
 }
 
+/* якщо пост з картинкою останній -- щоб кнопку не приклеювало */
+.preview.bg + .center
+{
+    margin-top: var(--gap);
+}
 
 .preview.bg .post-content
 {
