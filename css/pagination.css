@@ -20,10 +20,9 @@
     background: var(--white);
     color: var(--red);
     text-decoration: none;
-    width: calc(var(--gap)*2);
+    min-width: calc(var(--gap)*2);
     height: calc(var(--gap)*2);
     font-weight: bold;
-    /* transition: .5s; */
 }
 
 .pagination li a:hover
