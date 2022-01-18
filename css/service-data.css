@@ -19,7 +19,8 @@ color: var(--gray5); -- колір з дизайну, який лайтхауз 
     font-size: 12px;
     line-height: 20px;
     color: var(--gray3);
-    font-weight: 800;
+    /* font-weight: 800; */
+    font-weight: 700;
 }
 
 /* кількість коментів у пості */

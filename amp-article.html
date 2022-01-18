@@ -5,7 +5,20 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<title>amp-article :: varta_1</title>
 
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+			rel="stylesheet"
+		/>
+
 		<script async src="https://cdn.ampproject.org/v0.js"></script>
+		<!-- gallery: -->
+		<script
+			async
+			custom-element="amp-carousel"
+			src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"
+		></script>
 		<link rel="canonical" href="amp-article.html" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<style amp-boilerplate>
@@ -72,38 +85,18 @@
 				padding: 0;
 				margin: 0;
 				box-sizing: border-box;
+				font-family: "Open Sans", sans-serif;
 			}
 			:root {
 				--white: #fff;
 				--red: #991607;
-				/* --red-cross: #ff0000; */
 				--black: #000;
-				--red-dirty: linear-gradient(90deg, #97473e, #723832);
-				--red-border: #ad7a75;
-				/* search-ads border */
 				--gray1: #f6f7f8;
-				/* aside bg */
 				--gray2: #eeeff1;
-				/* border */
 				--gray3: #5d595b;
-				--gray4: #e6e6e6;
-				/* лінія між постами в асайді */
-				--gray5: #999;
-				/* date */
-				--footer-bg: #434a54;
-				--footer-border: #656b73;
-				--gray6: #eeeff1;
-				/* примітка футера */
-				--bg-nav: #191919;
-				--gap: 20px;
-				/* мітка, кнопка */
 				--red-gradient: linear-gradient(320deg, #5d1f17, #ae1201);
-				/* поля у блоці "пошук оголошень" */
-				--red-input: linear-gradient(90deg, #aa6b64, #a56962);
-				--white-button: linear-gradient(90deg, #fff, #cbcfd9);
-				--facebook: #515eb3;
-				--twitter: #6ab8ff;
-				--telegram: #389ce9;
+				/**/
+				--gap: 20px;
 			}
 			.wrapper {
 				width: 95%;
@@ -116,10 +109,139 @@
 				font-size: 24px;
 				line-height: 18px;
 			}
+			#header {
+				display: flex;
+				align-items: center;
+				height: 50px;
+				border-bottom: 1px solid var(--gray2);
+				gap: var(--gap);
+
+				width: 95%;
+				margin: auto;
+			}
+			#logo {
+				margin-right: auto;
+				width: 120px;
+				height: 48px;
+			}
+			#search-button {
+				height: 20px;
+				width: 20px;
+				background-image: url("data:image/svg+xml,%3Csvg fill='%23000000' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 288.136 288.136'%3E%3Cpath d='M253.094,35.437c-22.634-22.634-52.727-35.099-84.735-35.099s-62.102,12.465-84.735,35.099 c-38.632,38.632-45.319,97.294-20.067,142.865L9.496,232.364c-12.661,12.661-12.661,33.262,0,45.923 c6.133,6.134,14.287,9.511,22.961,9.511s16.828-3.377,22.961-9.511l53.821-53.821c17.824,10.141,38.057,15.539,59.12,15.539 c32.009,0,62.102-12.464,84.735-35.098C299.817,158.183,299.817,82.16,253.094,35.437z M231.882,183.694 c-16.968,16.967-39.527,26.311-63.522,26.311s-46.555-9.344-63.522-26.311c-35.025-35.026-35.025-92.019,0-127.044 c16.968-16.968,39.527-26.312,63.522-26.312s46.555,9.344,63.522,26.312C266.907,91.676,266.907,148.668,231.882,183.694z'/%3E%3C/svg%3E");
+			}
+			#nav-button {
+				width: 20px;
+				height: 14px;
+				background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOAQMAAAAVCq6zAAAABlBMVEUAAAAAAAClZ7nPAAAAAXRSTlMAQObYZgAAABFJREFUCNdj+P//AxijAULiAOzREZULVv5PAAAAAElFTkSuQmCC");
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			section {
+				margin: var(--gap) auto;
+				width: 95%;
+			}
+			section h1 {
+				font-size: 25px;
+				line-height: 30px;
+				font-weight: 700;
+			}
+			section div {
+				display: flex;
+				align-items: center;
+				gap: var(--gap);
+				margin: calc(var(--gap) / 4) 0;
+			}
+			section time {
+				font-size: 12px;
+				line-height: 20px;
+				color: var(--gray3);
+				font-weight: 800;
+			}
+			section span {
+				width: 40px;
+				height: 30px;
+				background: var(--red-gradient);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-weight: bold;
+				font-size: 12px;
+				line-height: 20px;
+				color: var(--white);
+				clip-path: polygon(
+					0% 23.33%,
+					100% 23.33%,
+					100% 81.67%,
+					55% 81.67%,
+					32.5% 103.33%,
+					32.5% 81.67%,
+					0% 81.67%
+				);
+				position: relative;
+				top: -2px;
+			}
+			section p {
+				font-size: 16px;
+				line-height: 20px;
+				font-weight: 700;
+				margin: 0 0 calc(var(--gap) + 5px);
+			}
+			section figcaption {
+				font-size: 12px;
+				line-height: 24px;
+				font-weight: 400;
+				text-align: center;
+			}
+			main {
+				margin: auto;
+				width: 95%;
+			}
+			main p {
+				margin: 0 0 var(--gap);
+			}
+			blockquote {
+				margin: 50px 0 40px;
+				padding: calc(var(--gap) * 2);
+				background: var(--gray1);
+				text-align: center;
+				position: relative;
+			}
+			blockquote::before {
+				content: "";
+				display: block;
+				background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAhBAMAAABdKiSrAAAAMFBMVEUAAACZFgeZFgeZFgeZFgeZFgeZFgeZFgeZFgeZFgeZFgeZFgeZFgeZFgeZFgeZFgdxUaIaAAAAD3RSTlMAdxHuVTPdzKqIIpm7ZkTDMFlVAAABKElEQVQoz0WPsUoDQRRFryHBZI0iNpZGAraCkHoDFmKVBX/AQsFGlnxBLOz3D9zSxiJYWlmn0V8Ju66uUW72Zd68OdXhzpuZ+wAczziFckk+Qdhlw78LX8QXYkcU5qJRKlokwBY3rCQ9cT4ChnTs2zVWZjwDWrFNzNSWQJs24c+/7QuyBD2DkNZIvY6b5nYvo33R8VpgElL7meiHNEzIlpb2LMWz7JuG5e7kXeCQdZJLB6CTc9qSDg1uKIFC/qjlLKA0s0vVjCs1af2rGrNUk73f7fwaSpf8dNYzA05ZqQ2ljNUpzb6sQswHZ5FsZs9WA2fboRcmHFnbeWhb6JI7rOG54q2+/8ExlDb/9NVzLqBEme99wRtrlfPV2R7v4enzDZo+wugeqKwBWtIsk7cTA50AAAAASUVORK5CYII=");
+				position: absolute;
+				top: -14px;
+				left: calc(50% - 21px);
+				z-index: 1;
+				width: 42px;
+				height: 33px;
+			}
+			blockquote amp-img {
+				width: 120px;
+				height: 120px;
+				display: block;
+				margin: auto;
+				border-radius: 50%;
+			}
+			blockquote strong {
+				font-size: 18px;
+				line-height: 18px;
+				font-weight: 700;
+				display: block;
+			}
+			blockquote small {
+				display: block;
+				font-size: 14px;
+				line-height: 18px;
+			}
+			aside {
+				width: 95%;
+				margin: auto;
+			}
 		</style>
 
 		<meta name="description" content="varta 1 - article" />
-		<link rel="stylesheet" href="css/styles.css" />
 
 		<link rel="icon" type="image/svg" href="./favicon.svg" />
 
@@ -127,628 +249,429 @@
 		<meta property="og:url" content="amp-article.html" />
 	</head>
 	<body>
-		<div class="wrapper">
-			<header id="header">
-				<a href="#" title="varta 1" id="logo">
+		<header id="header">
+			<a href="/" title="varta 1" id="logo">
+				<amp-img
+					src="images/logo-header.png"
+					layout="responsive"
+					alt=""
+					width="120"
+					height="48"
+				></amp-img>
+			</a>
+			<div id="search-button"></div>
+			<div id="nav-button"></div>
+		</header>
+
+		<section>
+			<h1>
+				Зі Львова можна буде літати на матчі команд Гвардіоли і
+				Сульшера: Ryanair відкриє два авіарейси Львів-Манчестер
+			</h1>
+
+			<div>
+				<time>2021-10-04</time>
+				<span>127</span>
+			</div>
+
+			<p>
+				Лоукостер Ryanair відкрив продаж на прямий рейс Львів-Манчестер,
+				який він запустить 5 листопада. Авіакомпанія буде літати за цим
+				маршрутом два рази на тиждень у понеділок і п’ятницю. Час у
+				дорозі становитиме 3 години.
+			</p>
+
+			<figure>
+				<amp-img
+					src="temp/08.jpg"
+					alt="Зі Львова можна буде літати на матчі команд Гвардіоли і Сульшера: Ryanair відкриє два авіарейси Львів-Манчестер"
+					layout="responsive"
+					width="960"
+					height="639"
+				></amp-img>
+				<figcaption>
+					Лоукостер Ryanair відкрив продаж на прямий рейс
+					Львів-Манчестер
+				</figcaption>
+			</figure>
+		</section>
+
+		<main>
+			<p>
+				<strong
+					>Авіакомпанія буде літати за цим маршрутом два рази на
+					тиждень у понеділок і п'ятницю. Час у дорозі становитиме 3
+					години. Про це повідомляє avianews, пише
+					Dailylviv.com.</strong
+				>
+			</p>
+
+			<p>
+				Лоукостер Ryanair відкрив продаж на прямий рейс Львів-Манчестер,
+				який він запустить 5 листопада.
+			</p>
+			<p>
+				Авіакомпанія буде літати за цим маршрутом два рази на тиждень у
+				понеділок і п'ятницю. Час у дорозі становитиме 3 години. Про це
+				повідомляє avianews, пише Dailylviv.com.
+			</p>
+			<p>
+				Зараз авіаквитки зі Львова в Манчестер є в продажу на рейси до
+				кінця зимової навігації, тобто до кінця березня 2022 року.
+			</p>
+
+			<blockquote>
+				<p>
+					Мінімальна вартість перельоту починається від 15 євро в один
+					бік. Найнижчий тариф включає перевезення тільки одного місця
+					ручної поклажі з габаритами до 40х25х20 см. Вага ручної
+					поклажі при цьому не обмежена.
+				</p>
+
+				<amp-img
+					src="temp/une-gulnar.jpg"
+					alt=""
+					width="120"
+					height="120"
+				></amp-img>
+
+				<strong>Уве Гульнар Сушер</strong>
+				<small>Тренер Манчестер-Юнайтед</small>
+			</blockquote>
+
+			<p>
+				Щоб взяти з собою більше ручної поклажі або багаж, потрібно
+				вибрати дорожчий тариф або оплатити перевезення речей понад
+				безкоштовну норму як додаткову послугу.
+			</p>
+
+			<amp-carousel
+				width="450"
+				height="300"
+				layout="responsive"
+				type="slides"
+				role="region"
+				loop
+				aria-label="Carousel"
+			>
+				<amp-img
+					src="temp/gallery.jpg"
+					alt=""
+					layout="responsive"
+					width="719"
+					height="467"
+				></amp-img>
+				<amp-img
+					src="temp/gallery.jpg"
+					alt=""
+					layout="responsive"
+					width="719"
+					height="467"
+				></amp-img>
+				<amp-img
+					src="temp/gallery.jpg"
+					alt=""
+					layout="responsive"
+					width="719"
+					height="467"
+				></amp-img>
+			</amp-carousel>
+		</main>
+
+		<aside class="posts-3">
+			<div class="title">Читайте також</div>
+
+			<article class="post">
+				<div class="picture">
 					<picture>
 						<amp-img
-							src="images/logo-header.png"
-							layout="responsive"
+							src="temp/01.jpg"
 							alt=""
-							width="259"
-							height="104"
+							layout="responsive"
+							width="300"
+							height="200"
 						></amp-img>
 					</picture>
-				</a>
-				<nav id="nav">
-					<time><span>Понеділок</span>, 4 жовтня, 2021</time>
-					<ul>
-						<li><a href="#">Новини</a></li>
-						<li><a href="#">Львів</a></li>
-						<li><a href="#">Україна</a></li>
-						<li><a href="#">Політика</a></li>
-						<li><a href="#">Статті</a></li>
-						<li><a href="#">ДТП</a></li>
-						<li><a href="#">Кримінал</a></li>
-						<li><a href="#">Розшук</a></li>
-					</ul>
+				</div>
+				<h1>
+					<a href="#">В Україні виявили ще 4821 випадків Ковід-19</a>
+				</h1>
+				<div class="service-data">
+					<time>2021-10-04</time>
+					<span>45</span>
+				</div>
+				<p>
+					Станом на ранок понеділка, 4 жовтня в Україні лаборатоhно
+					підтвердили 4821 новий випадок коронавірусу. Померли 114
+					українці, тоді як одужали більше тисячі хворих. Про це
+					Львівському порталу повідомили у Міністерстві охорони
+					здороd'я.
+				</p>
+			</article>
 
-					<div id="nav-button"></div>
+			<article class="post">
+				<div class="picture">
+					<picture>
+						<amp-img
+							src="temp/02.jpg"
+							alt=""
+							layout="responsive"
+							width="300"
+							height="200"
+						></amp-img>
+					</picture>
+				</div>
+				<h1>
+					<a href="#">Ринейр відкриє два рейси Львів-Манчестер</a>
+				</h1>
+				<div class="service-data">
+					<time>2021-10-04</time>
+					<span>14</span>
+				</div>
+				<p>
+					Лоукостер Ринейр відркив продаж на прямий рейс
+					Львів-Манчестер, який він запустить 5 листопада.
+					Авіакомпанія буде літати за цим маршрутом два рази на
+					тиждень у понеділок і п'ятницю. Час у дорозі становитиме
+					3...
+				</p>
+			</article>
 
-					<div id="search-form">
-						<form>
-							<input type="text" />
-							<input type="submit" />
-						</form>
-						<div id="search-button-close"></div>
+			<article class="post">
+				<div class="picture">
+					<picture>
+						<amp-img
+							src="temp/03.jpg"
+							alt=""
+							layout="responsive"
+							width="300"
+							height="200"
+						></amp-img>
+					</picture>
+				</div>
+				<h1>
+					<a href="#"
+						>Садовий розповів, чи готове місто до нового
+						опалювального сезону</a
+					>
+				</h1>
+				<div class="service-data">
+					<time>2021-10-04</time>
+					<span>9</span>
+				</div>
+				<p>
+					Львів нині повністю є готовим до нового опальювального
+					сезону. Про це в понеділок, 4 жовтня, розповів мер міста
+					Андрій Садовий в етері на радіо "Люкс ФМ". З його слів
+					опалення до будинків у місті...
+				</p>
+			</article>
+		</aside>
+		<!-- .posts-3 -->
+
+		<aside id="aside">
+			<h1 class="title">Останні новини</h1>
+
+			<article class="preview">
+				<time>00:18</time>
+				<h1>
+					<a href="#">На Львівщині надзвичайники врятували собаку</a>
+				</h1>
+			</article>
+
+			<article class="preview">
+				<time>00:18</time>
+				<h1>
+					<a href="#">На Львівщині надзвичайники врятували собаку</a>
+				</h1>
+			</article>
+
+			<article class="preview">
+				<time>00:18</time>
+				<h1>
+					<a href="#"
+						>Садовий розповів, чи готове місто до нового
+						опалювального сезону</a
+					>
+				</h1>
+			</article>
+
+			<article class="preview">
+				<time>00:18</time>
+				<h1>
+					<a href="#"
+						>На Львівщині надзвичайники врятували собаку. На
+						Львівщині надзвичайники врятували собаку.
+					</a>
+				</h1>
+			</article>
+
+			<article class="preview important">
+				<time>00:18</time>
+				<h1>
+					<a href="#">На Львівщині надзвичайники врятували собаку</a>
+				</h1>
+			</article>
+
+			<article class="preview bg">
+				<div class="picture">
+					<picture>
+						<amp-img
+							src="temp/velo.jpg"
+							alt=""
+							layout="responsive"
+							width="300"
+							height="200"
+						></amp-img>
+					</picture>
+
+					<div class="post-content">
+						<time>00:18</time>
+						<h1>
+							<a href="#"
+								>У Львові нагородили переможців шосейної
+								велогонки TOUR de ONUR</a
+							>
+						</h1>
 					</div>
-				</nav>
-				<div id="search-button"></div>
-			</header>
-		</div>
-		<!-- #header -->
+				</div>
+			</article>
 
-		<div class="wrapper">
-			<div id="article">
-				<section id="article-content">
-					<header>
+			<article class="preview">
+				<time>00:18</time>
+				<h1>
+					<a href="#">На Львівщині надзвичайники врятували собаку</a>
+				</h1>
+			</article>
+
+			<article class="preview">
+				<time>00:18</time>
+				<h1>
+					<a href="#">На Львівщині надзвичайники врятували собаку</a>
+				</h1>
+			</article>
+
+			<article class="preview">
+				<time>00:18</time>
+				<h1>
+					<a href="#">На Львівщині надзвичайники врятували собаку</a>
+				</h1>
+			</article>
+
+			<article class="preview">
+				<time>00:18</time>
+				<h1>
+					<a href="#"
+						>Зі Львова можна буде літати на матчі команд Гвардіоли і
+						СульшераЖ Ryanair відкриє два авіарейси
+						Львів-Манчестер</a
+					>
+				</h1>
+			</article>
+
+			<article class="preview">
+				<time>00:18</time>
+				<h1>
+					<a href="#">На Львівщині надзвичайники врятували собаку</a>
+				</h1>
+			</article>
+
+			<article class="preview">
+				<time>00:18</time>
+				<h1>
+					<a href="#"
+						>Садовий розповів, чи готове місто до нового
+						опалювального сезону</a
+					>
+				</h1>
+			</article>
+
+			<article class="preview">
+				<time>00:18</time>
+				<h1>
+					<a href="#"
+						>У поліції назвали умови за яких не каратимуть власників
+						підроблених COVID-сертифікатів</a
+					>
+				</h1>
+			</article>
+
+			<article class="preview bg">
+				<div class="picture">
+					<picture>
+						<amp-img
+							src="temp/velo.jpg"
+							alt=""
+							layout="responsive"
+							width="300"
+							height="200"
+						></amp-img>
+					</picture>
+
+					<div class="post-content">
+						<time>00:18</time>
 						<h1>
-							Зі Львова можна буде літати на матчі команд
-							Гвардіоли і Сульшера: Ryanair відкриє два авіарейси
-							Львів-Манчестер
-						</h1>
-
-						<div class="service-data">
-							<time>2021-10-04</time>
-							<span>127</span>
-						</div>
-
-						<p>
-							Лоукостер Ryanair відкрив продаж на прямий рейс
-							Львів-Манчестер, який він запустить 5 листопада.
-							Авіакомпанія буде літати за цим маршрутом два рази
-							на тиждень у понеділок і п’ятницю. Час у дорозі
-							становитиме 3 години.
-						</p>
-
-						<figure>
-							<div class="picture">
-								<picture>
-									<amp-img
-										src="temp/08.jpg"
-										alt="Зі Львова можна буде літати на матчі команд Гвардіоли
-                                         і Сульшера: Ryanair відкриє два авіарейси Львів-Манчестер"
-										layout="responsive"
-										width="960"
-										height="639"
-									></amp-img>
-								</picture>
-							</div>
-							<figcaption>
-								Лоукостер Ryanair відкрив продаж на прямий рейс
-								Львів-Манчестер
-							</figcaption>
-						</figure>
-					</header>
-
-					<aside>
-						<div class="share-buttons">
-							<ul>
-								<li class="facebook">
-									<a href="#">23+</a>
-								</li>
-								<li class="twitter">
-									<a href="#">54+</a>
-								</li>
-								<li class="telegram">
-									<a href="#">95+</a>
-								</li>
-							</ul>
-						</div>
-
-						<h1 class="title">До теми</h1>
-						<ul class="appendix">
-							<li>
-								<a href="#"
-									>Підроблений тест на Коронавірус
-									експрес-доставкою: СБУ заблокувала незаконну
-									схему</a
-								>
-							</li>
-							<li>
-								<a href="#"
-									>Як легко обрати нову техніку з вигодою</a
-								>
-							</li>
-							<li>
-								<a href="#"
-									>В уряді розробили механізм перерахунку
-									вартості за неякісні компослуги</a
-								>
-							</li>
-						</ul>
-					</aside>
-
-					<main>
-						<p>
-							<strong
-								>Авіакомпанія буде літати за цим маршрутом два
-								рази на тиждень у понеділок і п'ятницю. Час у
-								дорозі становитиме 3 години. Про це повідомляє
-								avianews, пише Dailylviv.com.</strong
+							<a href="#"
+								>У Львові нагородили переможців шосейної
+								велогонки TOUR de ONUR</a
 							>
-						</p>
-
-						<p>
-							Лоукостер Ryanair відкрив продаж на прямий рейс
-							Львів-Манчестер, який він запустить 5 листопада.
-						</p>
-						<p>
-							Авіакомпанія буде літати за цим маршрутом два рази
-							на тиждень у понеділок і п'ятницю. Час у дорозі
-							становитиме 3 години. Про це повідомляє avianews,
-							пише Dailylviv.com.
-						</p>
-						<p>
-							Зараз авіаквитки зі Львова в Манчестер є в продажу
-							на рейси до кінця зимової навігації, тобто до кінця
-							березня 2022 року.
-						</p>
-
-						<blockquote>
-							<p>
-								Мінімальна вартість перельоту починається від 15
-								євро в один бік. Найнижчий тариф включає
-								перевезення тільки одного місця ручної поклажі з
-								габаритами до 40х25х20 см. Вага ручної поклажі
-								при цьому не обмежена.
-							</p>
-
-							<picture>
-								<amp-img
-									src="temp/une-gulnar.jpg"
-									alt=""
-									layout="responsive"
-									width="120"
-									height="120"
-								></amp-img>
-							</picture>
-
-							<strong>Уве Гульнар Сушер</strong>
-							<small>Тренер Манчестер-Юнайтед</small>
-						</blockquote>
-
-						<p>
-							Щоб взяти з собою більше ручної поклажі або багаж,
-							потрібно вибрати дорожчий тариф або оплатити
-							перевезення речей понад безкоштовну норму як
-							додаткову послугу.
-						</p>
-
-						<!-- todo: add gallery -->
-
-						<!-- 						<figure>
-							<div class="levus-touch-gallery">
-								<div class="slides">
-									<ul>
-										<li>
-											<a href="temp/03.jpg">
-												<picture>
-													<amp-img
-														src="temp/gallery.jpg"
-														data-thumb="temp/thumb.jpg"
-														data-height="800"
-														alt=""
-														layout="responsive"
-														width="719"
-														height="467"
-													></amp-img>
-												</picture>
-											</a>
-										</li>
-										<li>
-											<a href="temp/03.jpg">
-												<picture>
-													<amp-img
-														src="temp/gallery.jpg"
-														data-thumb="temp/thumb.jpg"
-														data-height="800"
-														alt=""
-														layout="responsive"
-														width="719"
-														height="467"
-													></amp-img>
-												</picture>
-											</a>
-										</li>
-										<li>
-											<a href="temp/03.jpg">
-												<picture>
-													<amp-img
-														src="temp/gallery.jpg"
-														data-thumb="temp/thumb.jpg"
-														data-height="800"
-														alt=""
-														layout="responsive"
-														width="719"
-														height="467"
-													></amp-img>
-												</picture>
-											</a>
-										</li>
-										<li>
-											<a href="temp/03.jpg">
-												<picture>
-													<amp-img
-														src="temp/gallery.jpg"
-														data-thumb="temp/thumb.jpg"
-														data-height="800"
-														alt=""
-														layout="responsive"
-														width="719"
-														height="467"
-													></amp-img>
-												</picture>
-											</a>
-										</li>
-										<li>
-											<a href="temp/03.jpg">
-												<picture>
-													<amp-img
-														src="temp/gallery.jpg"
-														data-thumb="temp/thumb.jpg"
-														data-height="800"
-														alt=""
-														layout="responsive"
-														width="719"
-														height="467"
-													></amp-img>
-												</picture>
-											</a>
-										</li>
-										<li>
-											<a href="temp/03.jpg">
-												<picture>
-													<amp-img
-														src="temp/gallery.jpg"
-														data-thumb="temp/thumb.jpg"
-														data-height="800"
-														alt=""
-														layout="responsive"
-														width="719"
-														height="467"
-													></amp-img>
-												</picture>
-											</a>
-										</li>
-										<li>
-											<a href="temp/03.jpg">
-												<picture>
-													<amp-img
-														src="temp/gallery.jpg"
-														data-thumb="temp/thumb.jpg"
-														data-height="800"
-														alt=""
-														layout="responsive"
-														width="719"
-														height="467"
-													></amp-img>
-												</picture>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<figcaption>
-								Лоукостер Ryanair відкрив продаж на прямий рейс
-								Львів-Манчестер
-							</figcaption>
-						</figure> -->
-					</main>
-
-					<div class="posts-3">
-						<div class="title">Читайте також</div>
-
-						<article class="post">
-							<div class="picture">
-								<picture>
-									<amp-img
-										src="temp/01.jpg"
-										alt=""
-										layout="responsive"
-										width="300"
-										height="200"
-									></amp-img>
-								</picture>
-							</div>
-							<h1>
-								<a href="#"
-									>В Україні виявили ще 4821 випадків
-									Ковід-19</a
-								>
-							</h1>
-							<div class="service-data">
-								<time>2021-10-04</time>
-								<span>45</span>
-							</div>
-							<p>
-								Станом на ранок понеділка, 4 жовтня в Україні
-								лаборатоhно підтвердили 4821 новий випадок
-								коронавірусу. Померли 114 українці, тоді як
-								одужали більше тисячі хворих. Про це Львівському
-								порталу повідомили у Міністерстві охорони
-								здороd'я.
-							</p>
-						</article>
-
-						<article class="post">
-							<div class="picture">
-								<picture>
-									<amp-img
-										src="temp/02.jpg"
-										alt=""
-										layout="responsive"
-										width="300"
-										height="200"
-									></amp-img>
-								</picture>
-							</div>
-							<h1>
-								<a href="#"
-									>Ринейр відкриє два рейси Львів-Манчестер</a
-								>
-							</h1>
-							<div class="service-data">
-								<time>2021-10-04</time>
-								<span>14</span>
-							</div>
-							<p>
-								Лоукостер Ринейр відркив продаж на прямий рейс
-								Львів-Манчестер, який він запустить 5 листопада.
-								Авіакомпанія буде літати за цим маршрутом два
-								рази на тиждень у понеділок і п'ятницю. Час у
-								дорозі становитиме 3...
-							</p>
-						</article>
-
-						<article class="post">
-							<div class="picture">
-								<picture>
-									<amp-img
-										src="temp/03.jpg"
-										alt=""
-										layout="responsive"
-										width="300"
-										height="200"
-									></amp-img>
-								</picture>
-							</div>
-							<h1>
-								<a href="#"
-									>Садовий розповів, чи готове місто до нового
-									опалювального сезону</a
-								>
-							</h1>
-							<div class="service-data">
-								<time>2021-10-04</time>
-								<span>9</span>
-							</div>
-							<p>
-								Львів нині повністю є готовим до нового
-								опальювального сезону. Про це в понеділок, 4
-								жовтня, розповів мер міста Андрій Садовий в
-								етері на радіо "Люкс ФМ". З його слів опалення
-								до будинків у місті...
-							</p>
-						</article>
+						</h1>
 					</div>
-					<!-- .posts-3 -->
-				</section>
-				<!-- #content -->
+				</div>
+			</article>
 
-				<aside id="aside">
-					<h1 class="title">Останні новини</h1>
+			<article class="preview">
+				<time>00:18</time>
+				<h1>
+					<a href="#"
+						>Після скандалу з лідером українських антивакцинаторів
+						Стахівим, директора ліцею госпіталізували в
+						кардіоцентр</a
+					>
+				</h1>
+			</article>
 
-					<article class="preview">
-						<time>00:18</time>
-						<h1>
-							<a href="#"
-								>На Львівщині надзвичайники врятували собаку</a
-							>
-						</h1>
-					</article>
+			<article class="preview">
+				<time>00:18</time>
+				<h1>
+					<a href="#"
+						>Депутат звернувся в СБУ вважаючи, що антивакцинаторська
+						діяльність львівського провокатора може призвести до
+						повалення конституційного ладу</a
+					>
+				</h1>
+			</article>
 
-					<article class="preview">
-						<time>00:18</time>
-						<h1>
-							<a href="#"
-								>На Львівщині надзвичайники врятували собаку</a
-							>
-						</h1>
-					</article>
+			<article class="preview">
+				<time>00:18</time>
+				<h1>
+					<a href="#">На Львівщині надзвичайники врятували собаку</a>
+				</h1>
+			</article>
 
-					<article class="preview">
-						<time>00:18</time>
-						<h1>
-							<a href="#"
-								>Садовий розповів, чи готове місто до нового
-								опалювального сезону</a
-							>
-						</h1>
-					</article>
+			<article class="preview">
+				<time>00:18</time>
+				<h1>
+					<a href="#"
+						>Садовий розповів, чи готове місто до нового
+						опалювального сезону</a
+					>
+				</h1>
+			</article>
 
-					<article class="preview">
-						<time>00:18</time>
-						<h1>
-							<a href="#"
-								>На Львівщині надзвичайники врятували собаку. На
-								Львівщині надзвичайники врятували собаку.
-							</a>
-						</h1>
-					</article>
-
-					<article class="preview important">
-						<time>00:18</time>
-						<h1>
-							<a href="#"
-								>На Львівщині надзвичайники врятували собаку</a
-							>
-						</h1>
-					</article>
-
-					<article class="preview bg">
-						<div class="picture">
-							<picture>
-								<amp-img
-									src="temp/velo.jpg"
-									alt=""
-									layout="responsive"
-									width="300"
-									height="200"
-								></amp-img>
-							</picture>
-
-							<div class="post-content">
-								<time>00:18</time>
-								<h1>
-									<a href="#"
-										>У Львові нагородили переможців шосейної
-										велогонки TOUR de ONUR</a
-									>
-								</h1>
-							</div>
-						</div>
-					</article>
-
-					<article class="preview">
-						<time>00:18</time>
-						<h1>
-							<a href="#"
-								>На Львівщині надзвичайники врятували собаку</a
-							>
-						</h1>
-					</article>
-
-					<article class="preview">
-						<time>00:18</time>
-						<h1>
-							<a href="#"
-								>На Львівщині надзвичайники врятували собаку</a
-							>
-						</h1>
-					</article>
-
-					<article class="preview">
-						<time>00:18</time>
-						<h1>
-							<a href="#"
-								>На Львівщині надзвичайники врятували собаку</a
-							>
-						</h1>
-					</article>
-
-					<article class="preview">
-						<time>00:18</time>
-						<h1>
-							<a href="#"
-								>Зі Львова можна буде літати на матчі команд
-								Гвардіоли і СульшераЖ Ryanair відкриє два
-								авіарейси Львів-Манчестер</a
-							>
-						</h1>
-					</article>
-
-					<article class="preview">
-						<time>00:18</time>
-						<h1>
-							<a href="#"
-								>На Львівщині надзвичайники врятували собаку</a
-							>
-						</h1>
-					</article>
-
-					<article class="preview">
-						<time>00:18</time>
-						<h1>
-							<a href="#"
-								>Садовий розповів, чи готове місто до нового
-								опалювального сезону</a
-							>
-						</h1>
-					</article>
-
-					<article class="preview">
-						<time>00:18</time>
-						<h1>
-							<a href="#"
-								>У поліції назвали умови за яких не каратимуть
-								власників підроблених COVID-сертифікатів</a
-							>
-						</h1>
-					</article>
-
-					<article class="preview bg">
-						<div class="picture">
-							<picture>
-								<amp-img
-									src="temp/velo.jpg"
-									alt=""
-									layout="responsive"
-									width="300"
-									height="200"
-								></amp-img>
-							</picture>
-
-							<div class="post-content">
-								<time>00:18</time>
-								<h1>
-									<a href="#"
-										>У Львові нагородили переможців шосейної
-										велогонки TOUR de ONUR</a
-									>
-								</h1>
-							</div>
-						</div>
-					</article>
-
-					<article class="preview">
-						<time>00:18</time>
-						<h1>
-							<a href="#"
-								>Після скандалу з лідером українських
-								антивакцинаторів Стахівим, директора ліцею
-								госпіталізували в кардіоцентр</a
-							>
-						</h1>
-					</article>
-
-					<article class="preview">
-						<time>00:18</time>
-						<h1>
-							<a href="#"
-								>Депутат звернувся в СБУ вважаючи, що
-								антивакцинаторська діяльність львівського
-								провокатора може призвести до повалення
-								конституційного ладу</a
-							>
-						</h1>
-					</article>
-
-					<article class="preview">
-						<time>00:18</time>
-						<h1>
-							<a href="#"
-								>На Львівщині надзвичайники врятували собаку</a
-							>
-						</h1>
-					</article>
-
-					<article class="preview">
-						<time>00:18</time>
-						<h1>
-							<a href="#"
-								>Садовий розповів, чи готове місто до нового
-								опалювального сезону</a
-							>
-						</h1>
-					</article>
-
-					<article class="preview">
-						<time>00:18</time>
-						<h1>
-							<a href="#"
-								>У поліції назвали умови за яких не каратимуть
-								власників підроблених COVID-сертифікатів</a
-							>
-						</h1>
-					</article>
-					<div class="center">
-						<a href="#" class="button"> Більше новин </a>
-					</div>
-				</aside>
+			<article class="preview">
+				<time>00:18</time>
+				<h1>
+					<a href="#"
+						>У поліції назвали умови за яких не каратимуть власників
+						підроблених COVID-сертифікатів</a
+					>
+				</h1>
+			</article>
+			<div class="center">
+				<a href="#" class="button"> Більше новин </a>
 			</div>
-		</div>
-		<!-- .wrapper #page -->
+		</aside>
 
 		<footer id="footer">
 			<div class="wrapper">

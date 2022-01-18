@@ -1,8 +1,3 @@
-
-/*/////////////////////
-// шаблон "category" //
-/////////////////////*/
-
 #category 
 {
     display: grid;
@@ -10,7 +5,7 @@
     gap: var(--gap);
 }
 
-@media(max-width:776px)
+@media(max-width:996px)
 {
     #category 
     {
@@ -26,169 +21,74 @@
     gap: var(--gap);
 }
 
-@media(max-width:996px)
-{
-    #categories
-    {
-        border-top: 1px solid var(--gray1);
-        border-bottom: 1px solid var(--gray1);
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        gap: var(--gap);
-        margin-bottom: auto;
-    }
-
-    #categories .pagination 
-    {
-        grid-column: 1/-1;
-    }
-}
-
-/* 
-пости без фото і без короткої анотації
-але кожен 3 пост має фото та анотацію
-*/
-
 #categories .post 
 {
-    padding: var(--gap) var(--gap) 15px 110px;
+    padding: var(--gap) var(--gap) 15px 0;
     border-bottom: 1px solid var(--gray1);
     position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 70px 260px 1fr;
+    grid-template-areas:
+        'categories-post-service-data categories-post-picture categories-post-h1'
+        'categories-post-service-data categories-post-picture categories-post-p';
+    gap: var(--gap);
+    align-items: start;
 }
 
-@media(max-width:996px)
+@media(max-width:776px)
 {
     #categories .post 
     {
-        display: none;
+        grid-template-columns: 70px 200px 1fr;
     }
 }
 
-/* бордер для першого */
-#categories .post:first-child
+@media(max-width:500px)
 {
-    border-top: 1px solid var(--gray1);
-}
-
-/* 3 пост має картинку та анотацію */
-#categories .post:nth-child(3n+3) 
-{
-    padding: var(--gap) var(--gap) var(--gap) 110px;
-
-    background: var(--gray1);
-    display: grid;
-    gap: 0 var(--gap);
-    grid-template-columns: 150px 1fr;
-    grid-template-areas: 
-        'categories-post-picture categories-post-h1'
-        'categories-post-picture categories-post-p'
-}
-
-@media(max-width:996px)
-{
-    #categories .post:nth-child(3n+3) 
+    #categories .post 
     {
-        padding: 0;
-        display: grid;
-
-        grid-template-columns:1fr;
-        grid-template-areas: 
-            'categories-post-picture'
-            'categories-post-h1'
-            'categories-post-p' 
-    }
+        /* grid-template-rows: auto; */
+        grid-template-columns: 70px 1fr;
+        grid-template-areas:
+            'categories-post-service-data categories-post-picture'
+            'categories-post-service-data categories-post-h1'
+            'categories-post-service-data categories-post-p'
+    }    
 }
 
 #categories .post .service-data
 {
-    display: inline;
-    margin: 0;
-}
-
-@media(max-width:996px)
-{
-    #categories .post .service-data
-    {
-        display: flex;
-        /* align-items: center; */
-        /* gap: var(--gap); */
-        margin: calc(var(--gap)/4) 0;
-    }    
-}
-
-/* видираємо час і розміщуємо зліва */
-#categories .post time
-{
-    position: absolute;
-    top: calc(var(--gap) + 4px);
-    left: var(--gap);
-}
-
-@media(max-width:996px)
-{
-    #categories .post time
-    {
-        position: static;
-    }    
+    grid-area: categories-post-service-data;
+    flex-flow: column;
+    gap: 0;
 }
 
 #categories .post .picture
 {
-    display: none;
-}
-
-#categories .post:nth-child(3n+3) .picture 
-{
     grid-area: categories-post-picture;
-
-    display: block;
-    margin: 0 0 auto;
 }
 
-@media(max-width:996px)
+@media(max-width:500px)
 {
-    #categories .post:nth-child(3n+3) .picture 
+    #categories .post .picture
     {
-        margin: 0 0 var(--gap);
+        margin: 0;
     }    
+}
+
+#categories .post .picture picture
+{
+    background: var(--gray1);
 }
 
 #categories .post h1
 {
     grid-area: categories-post-h1;
-
-    display: flex;
-    gap: 0 var(--gap);
-    flex-wrap: wrap;
-}
-
-@media(max-width:500px)
-{
-    #categories .post h1
-    {
-        font-size: 18px;
-        line-height: 21px;
-        /* white-space: pre-wrap; */
-
-
-    }    
-}
-
-#categories .post h1 a
-{
-    display: inline;
 }
 
 #categories .post p
 {
-    display: none;
-}
-
-#categories .post:nth-child(3n+3) p 
-{
     grid-area: categories-post-p;
-
-    display: block;
-    /* margin: var(--gap) 0 0; */
-    /* margin: 10px 0 0; */
 }
