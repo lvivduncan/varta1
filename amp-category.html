@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<title>amp-article :: varta_1</title>
+		<title>amp-category :: varta_1</title>
 		<meta name="description" content="varta 1 - article" />
 		<link rel="icon" type="image/svg" href="./favicon.svg" />
 		<meta property="og:title" content="amp-article :: varta 1" />
@@ -16,19 +16,13 @@
 		/>
 		<!-- amp: -->
 		<script async src="https://cdn.ampproject.org/v0.js"></script>
-		<!-- gallery: -->
-		<script
-			async
-			custom-element="amp-carousel"
-			src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"
-		></script>
 		<!-- nav: -->
 		<script
 			async
 			custom-element="amp-sidebar"
 			src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"
 		></script>
-		<link rel="canonical" href="article.html" />
+		<link rel="canonical" href="category.html" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<style amp-boilerplate>
 			body {
@@ -110,10 +104,6 @@
 				--hr: #656b73;
 				--gap: 20px;
 			}
-			/* 			.wrapper {
-				width: 95%;
-				margin: auto;
-			} */
 			h1 {
 				font-size: 17px;
 			}
@@ -158,53 +148,7 @@
 				width: var(--gap);
 				height: var(--gap);
 			}
-			#mobile {
-				width: 300px;
-				background: var(--mobile);
-			}
-
-			#mobile header {
-				border-bottom: 1px solid var(--gray2);
-				/* position: relative; */
-				width: 95%;
-				margin: auto;
-			}
-			#mobile header a {
-				display: block;
-				width: 120px;
-				height: 48px;
-			}
-			#mobile header amp-img {
-				filter: invert(1);
-			}
-			#mobile nav {
-				padding: 19px 24px 33px;
-				display: grid;
-				gap: var(--gap);
-				grid-template-columns: 1fr;
-				overflow-y: scroll;
-				height: calc(100vh - 65px);
-			}
-			#mobile nav ul {
-				display: flex;
-				flex-direction: column;
-				gap: calc(var(--gap) - 4px);
-			}
-			#mobile nav li {
-				display: block;
-			}
-			#mobile nav a {
-				color: var(--white);
-				text-decoration: none;
-				font-size: 14px;
-				line-height: 1;
-			}
-			#mobile nav a strong {
-				text-transform: uppercase;
-				font-weight: 700;
-			}
-
-			section {
+			/* section {
 				margin: var(--gap) auto;
 				width: 95%;
 			}
@@ -259,70 +203,53 @@
 				line-height: 24px;
 				font-weight: 400;
 				text-align: center;
+			} */
+
+			#mobile {
+				width: 300px;
+				background: var(--mobile);
 			}
-			main {
-				margin: auto auto var(--gap);
+
+			#mobile header {
+				border-bottom: 1px solid var(--gray2);
 				width: 95%;
-			}
-			main p {
-				margin: 0 0 var(--gap);
-			}
-			blockquote {
-				margin: 50px 0 40px;
-				padding: calc(var(--gap) * 2);
-				background: var(--gray1);
-				text-align: center;
-				position: relative;
-			}
-			blockquote::before {
-				content: "";
-				display: block;
-				background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAhBAMAAABdKiSrAAAAMFBMVEUAAACZFgeZFgeZFgeZFgeZFgeZFgeZFgeZFgeZFgeZFgeZFgeZFgeZFgeZFgeZFgdxUaIaAAAAD3RSTlMAdxHuVTPdzKqIIpm7ZkTDMFlVAAABKElEQVQoz0WPsUoDQRRFryHBZI0iNpZGAraCkHoDFmKVBX/AQsFGlnxBLOz3D9zSxiJYWlmn0V8Ju66uUW72Zd68OdXhzpuZ+wAczziFckk+Qdhlw78LX8QXYkcU5qJRKlokwBY3rCQ9cT4ChnTs2zVWZjwDWrFNzNSWQJs24c+/7QuyBD2DkNZIvY6b5nYvo33R8VpgElL7meiHNEzIlpb2LMWz7JuG5e7kXeCQdZJLB6CTc9qSDg1uKIFC/qjlLKA0s0vVjCs1af2rGrNUk73f7fwaSpf8dNYzA05ZqQ2ljNUpzb6sQswHZ5FsZs9WA2fboRcmHFnbeWhb6JI7rOG54q2+/8ExlDb/9NVzLqBEme99wRtrlfPV2R7v4enzDZo+wugeqKwBWtIsk7cTA50AAAAASUVORK5CYII=");
-				position: absolute;
-				top: -14px;
-				left: calc(50% - 21px);
-				z-index: 1;
-				width: 42px;
-				height: 33px;
-			}
-			blockquote amp-img {
-				width: 120px;
-				height: 120px;
-				display: block;
 				margin: auto;
-				border-radius: 50%;
 			}
-			blockquote strong {
-				font-size: 18px;
-				line-height: 18px;
-				font-weight: 700;
+			#mobile header a {
+				display: block;
+				width: 120px;
+				height: 48px;
+			}
+			#mobile header amp-img {
+				filter: invert(1);
+			}
+			#mobile nav {
+				padding: 19px 24px 33px;
+				display: grid;
+				gap: var(--gap);
+				grid-template-columns: 1fr;
+				overflow-y: scroll;
+				height: calc(100vh - 65px);
+			}
+			#mobile nav ul {
+				display: flex;
+				flex-direction: column;
+				gap: calc(var(--gap) - 4px);
+			}
+			#mobile nav li {
 				display: block;
 			}
-			blockquote small {
-				display: block;
-				font-size: 14px;
-				line-height: 18px;
-			}
-			.tags {
-				border-top: 2px solid var(--gray4);
-				color: var(--black);
-				font-size: 12px;
-				margin: 20px 0;
-				padding: 10px 0;
-			}
-			.tags a {
-				display: inline-flex;
-				align-items: center;
-				justify-content: center;
-				color: var(--black);
+			#mobile nav a {
+				color: var(--white);
 				text-decoration: none;
-				background: var(--gray1);
-				margin: 0 8px 8px 0;
 				font-size: 14px;
-				padding: 4px 8px;
-				font-weight: 700;
-				transition: 0.5s;
+				line-height: 1;
 			}
+			#mobile nav a strong {
+				text-transform: uppercase;
+				font-weight: 700;
+			}
+
 			aside {
 				width: 95%;
 				margin: auto auto var(--gap);
@@ -334,6 +261,7 @@
 				grid-template-areas:
 					"post-2-title post-2-title"
 					"post-2-post-1 post-2-post-2";
+				margin: var(--gap) auto 0;
 			}
 			#post-2 .title {
 				grid-area: post-2-title;
@@ -427,7 +355,7 @@
 				overflow: hidden;
 				padding-top: 56.25%;
 			}
-			#aside .picture figure {
+			#aside .picture picture {
 				display: block;
 				width: 100%;
 				max-height: 100%;
@@ -437,7 +365,7 @@
 				left: 0;
 				right: 0;
 			}
-			#aside .picture figure amp-img {
+			#aside .picture picture amp-img {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
@@ -658,137 +586,14 @@
 			</nav>
 		</amp-sidebar>
 
-		<section>
-			<h1>
-				Зі Львова можна буде літати на матчі команд Гвардіоли і
-				Сульшера: Ryanair відкриє два авіарейси Львів-Манчестер
-			</h1>
-
-			<div>
-				<time>2021-10-04</time>
-				<span>127</span>
-			</div>
-
-			<p>
-				Лоукостер Ryanair відкрив продаж на прямий рейс Львів-Манчестер,
-				який він запустить 5 листопада. Авіакомпанія буде літати за цим
-				маршрутом два рази на тиждень у понеділок і п’ятницю. Час у
-				дорозі становитиме 3 години.
-			</p>
-
-			<figure>
-				<amp-img
-					src="temp/08.jpg"
-					alt="Зі Львова можна буде літати на матчі команд Гвардіоли і Сульшера: Ryanair відкриє два авіарейси Львів-Манчестер"
-					layout="responsive"
-					width="960"
-					height="639"
-				></amp-img>
-				<figcaption>
-					Лоукостер Ryanair відкрив продаж на прямий рейс
-					Львів-Манчестер
-				</figcaption>
-			</figure>
-		</section>
-
-		<main>
-			<p>
-				<strong
-					>Авіакомпанія буде літати за цим маршрутом два рази на
-					тиждень у понеділок і п'ятницю. Час у дорозі становитиме 3
-					години. Про це повідомляє avianews, пише
-					Dailylviv.com.</strong
-				>
-			</p>
-
-			<p>
-				Лоукостер Ryanair відкрив продаж на прямий рейс Львів-Манчестер,
-				який він запустить 5 листопада.
-			</p>
-			<p>
-				Авіакомпанія буде літати за цим маршрутом два рази на тиждень у
-				понеділок і п'ятницю. Час у дорозі становитиме 3 години. Про це
-				повідомляє avianews, пише Dailylviv.com.
-			</p>
-			<p>
-				Зараз авіаквитки зі Львова в Манчестер є в продажу на рейси до
-				кінця зимової навігації, тобто до кінця березня 2022 року.
-			</p>
-
-			<blockquote>
-				<p>
-					Мінімальна вартість перельоту починається від 15 євро в один
-					бік. Найнижчий тариф включає перевезення тільки одного місця
-					ручної поклажі з габаритами до 40х25х20 см. Вага ручної
-					поклажі при цьому не обмежена.
-				</p>
-
-				<amp-img
-					src="temp/une-gulnar.jpg"
-					alt=""
-					width="120"
-					height="120"
-				></amp-img>
-
-				<strong>Уве Гульнар Сушер</strong>
-				<small>Тренер Манчестер-Юнайтед</small>
-			</blockquote>
-
-			<p>
-				Щоб взяти з собою більше ручної поклажі або багаж, потрібно
-				вибрати дорожчий тариф або оплатити перевезення речей понад
-				безкоштовну норму як додаткову послугу.
-			</p>
-
-			<amp-carousel
-				width="450"
-				height="300"
-				layout="responsive"
-				type="slides"
-				role="region"
-				loop
-				aria-label="Carousel"
-			>
-				<amp-img
-					src="temp/gallery.jpg"
-					alt=""
-					layout="responsive"
-					width="719"
-					height="467"
-				></amp-img>
-				<amp-img
-					src="temp/gallery.jpg"
-					alt=""
-					layout="responsive"
-					width="719"
-					height="467"
-				></amp-img>
-				<amp-img
-					src="temp/gallery.jpg"
-					alt=""
-					layout="responsive"
-					width="719"
-					height="467"
-				></amp-img>
-			</amp-carousel>
-			<div class="tags">
-				<a
-					href="/news/l-viv-ursibbank-l-viv-budinok-unitaz-u-l-vovi/"
-					title="Львів, УРСИББАНК Львів, будинок-унітаз у Львові"
-					>Львів, УРСИББАНК Львів, будинок-унітаз у Львові</a
-				>
-				<a href="#" title="Львівські новини">Львівські новини</a>
-			</div>
-		</main>
-
 		<!-- на мобільному 2 пости, а не 3! -->
 
 		<aside id="post-2">
-			<h1 class="title">Читайте також</h1>
+			<h1 class="title">Львів</h1>
 
 			<article>
 				<div class="picture">
-					<figure>
+					<picture>
 						<amp-img
 							src="temp/01.jpg"
 							alt=""
@@ -796,7 +601,7 @@
 							width="300"
 							height="200"
 						></amp-img>
-					</figure>
+					</picture>
 				</div>
 				<h1>
 					<a href="#">В Україні виявили ще 4821 випадків Ковід-19</a>
@@ -813,7 +618,7 @@
 
 			<article>
 				<div class="picture">
-					<figure>
+					<picture>
 						<amp-img
 							src="temp/02.jpg"
 							alt=""
@@ -821,7 +626,7 @@
 							width="300"
 							height="200"
 						></amp-img>
-					</figure>
+					</picture>
 				</div>
 				<h1>
 					<a href="#">Ринейр відкриє два рейси Львів-Манчестер</a>
@@ -837,6 +642,8 @@
 			</article>
 		</aside>
 		<!-- #posts-2 -->
+
+		<h1>articles</h1>
 
 		<aside id="aside">
 			<h1 class="title">Останні новини</h1>
@@ -1076,7 +883,6 @@
 				тексті.
 			</p>
 
-			<!-- <div id="copyright"> -->
 			<ul class="social">
 				<li>
 					<a href="#" title="facebook">
@@ -1120,8 +926,6 @@
 					</a>
 				</li>
 			</ul>
-			<!-- </div> -->
-			<!-- </div> -->
 
 			<hr />
 
