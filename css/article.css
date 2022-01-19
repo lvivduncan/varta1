@@ -206,3 +206,13 @@ figure figcaption
         font-size: 18px;
     }
 }
+
+main a
+{
+    color: var(--red);
+    transition: .5s;
+}
+
+main a:hover{
+    color: var(--black);
+}
