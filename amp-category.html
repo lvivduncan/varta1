@@ -347,7 +347,8 @@
 				display: block;
 				padding: 0;
 			}
-			#aside .picture {
+
+			.picture {
 				display: block;
 				width: 100%;
 				height: auto;
@@ -355,7 +356,7 @@
 				overflow: hidden;
 				padding-top: 56.25%;
 			}
-			#aside .picture picture {
+			.picture figure {
 				display: block;
 				width: 100%;
 				max-height: 100%;
@@ -365,12 +366,12 @@
 				left: 0;
 				right: 0;
 			}
-			#aside .picture picture amp-img {
+			.picture figure amp-img {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
 			}
-			#aside .bg .picture::before {
+			.bg .picture::before {
 				content: "";
 				position: absolute;
 				top: 0;
@@ -381,7 +382,7 @@
 				z-index: 1;
 				display: block;
 			}
-			#aside .bg .post-content {
+			.bg .post-content {
 				position: absolute;
 				bottom: var(--gap);
 				left: calc(var(--gap) / 2);
@@ -391,7 +392,7 @@
 				grid-template-columns: 40px 1fr;
 				gap: 12px;
 			}
-			#aside .bg .post-content::before {
+			.bg .post-content::before {
 				content: "";
 				position: absolute;
 				top: calc(-1 * var(--gap) / 2);
@@ -402,20 +403,20 @@
 				display: block;
 				z-index: 3;
 			}
-			#aside .bg .post-content time {
+			.bg .post-content time {
 				color: var(--white);
 			}
-			#aside .bg .post-content h1 a {
+			.bg .post-content h1 a {
 				color: var(--white);
 				font-weight: 800;
 			}
-			#aside .center {
+			.center {
 				display: flex;
 				align-items: center;
 				justify-content: center;
 				margin-top: var(--gap);
 			}
-			#aside .center a {
+			.center a {
 				background: var(--red-gradient);
 				display: inline-block;
 				padding: 13px 22px;
@@ -487,6 +488,60 @@
 			}
 			.social svg {
 				fill: var(--white);
+			}
+
+			#articles {
+				margin: var(--gap) auto;
+				width: 95%;
+			}
+
+			#articles article {
+				display: grid;
+				grid-template-columns: 70px 1fr;
+				grid-template-areas:
+					"articles-article-time articles-article-picture"
+					"articles-article-time articles-article-h1"
+					"articles-article-time articles-article-p";
+				align-items: start;
+				gap: var(--gap);
+				padding: var(--gap) var(--gap) 15px 0;
+			}
+
+			#articles article time {
+				grid-area: articles-article-time;
+
+				font-size: 12px;
+				line-height: 20px;
+				color: var(--gray3);
+				font-weight: 700;
+			}
+
+			#articles article .picture {
+				grid-area: articles-article-picture;
+			}
+
+			#articles article h1 {
+				grid-area: articles-article-h1;
+
+				font-size: 21px;
+				line-height: 24px;
+				font-weight: 700;
+				/* color: var(--black); */
+			}
+			#articles article h1 a {
+				text-decoration: none;
+				color: var(--black);
+				display: block;
+				transition: 0.5s;
+				-ms-word-break: break-all;
+				word-break: break-all;
+				word-break: break-word;
+			}
+			#articles article p {
+				grid-area: articles-article-p;
+
+				font-size: 14px;
+				line-height: 20px;
 			}
 		</style>
 	</head>
@@ -593,7 +648,7 @@
 
 			<article>
 				<div class="picture">
-					<picture>
+					<figure>
 						<amp-img
 							src="temp/01.jpg"
 							alt=""
@@ -601,7 +656,7 @@
 							width="300"
 							height="200"
 						></amp-img>
-					</picture>
+					</figure>
 				</div>
 				<h1>
 					<a href="#">В Україні виявили ще 4821 випадків Ковід-19</a>
@@ -618,7 +673,7 @@
 
 			<article>
 				<div class="picture">
-					<picture>
+					<figure>
 						<amp-img
 							src="temp/02.jpg"
 							alt=""
@@ -626,7 +681,7 @@
 							width="300"
 							height="200"
 						></amp-img>
-					</picture>
+					</figure>
 				</div>
 				<h1>
 					<a href="#">Ринейр відкриє два рейси Львів-Манчестер</a>
@@ -643,7 +698,56 @@
 		</aside>
 		<!-- #posts-2 -->
 
-		<h1>articles</h1>
+		<div id="articles">
+			<article>
+				<time>2021-10-04 00:15</time>
+
+				<div class="picture">
+					<figure>
+						<amp-img
+							src="temp/00.jpg"
+							alt=""
+							layout="responsive"
+							width="300"
+							height="200"
+						></amp-img>
+					</figure>
+				</div>
+				<h1>
+					<a href="#">В Україні виявили ще 4821 випадків Ковід-19</a>
+				</h1>
+				<p>
+					Станом на ранок понеділка, 4 жовтня в Україні лаборатоhно
+					підтвердили 4821 новий випадок коронавірусу.
+				</p>
+			</article>
+
+			<article>
+				<time>2021-10-04 00:11</time>
+
+				<div class="picture">
+					<figure>
+						<amp-img
+							src="temp/01.jpg"
+							alt=""
+							layout="responsive"
+							width="300"
+							height="200"
+						></amp-img>
+					</figure>
+					<h1>
+						<a href="#"
+							>У Львові нагородили переможців шосейної велогонки
+							TOUR de ONUR</a
+						>
+					</h1>
+					<p>
+						Станом на ранок понеділка, 4 жовтня в Україні
+						лаборатоhно підтвердили 4821 новий випадок коронавірусу.
+					</p>
+				</div>
+			</article>
+		</div>
 
 		<aside id="aside">
 			<h1 class="title">Останні новини</h1>
@@ -691,7 +795,7 @@
 
 			<article class="bg">
 				<div class="picture">
-					<picture>
+					<figure>
 						<amp-img
 							src="temp/velo.jpg"
 							alt=""
@@ -699,7 +803,7 @@
 							width="300"
 							height="200"
 						></amp-img>
-					</picture>
+					</figure>
 
 					<div class="post-content">
 						<time>00:18</time>
@@ -774,7 +878,7 @@
 
 			<article class="bg">
 				<div class="picture">
-					<picture>
+					<figure>
 						<amp-img
 							src="temp/velo.jpg"
 							alt=""
@@ -782,7 +886,7 @@
 							width="300"
 							height="200"
 						></amp-img>
-					</picture>
+					</figure>
 
 					<div class="post-content">
 						<time>00:18</time>
@@ -851,14 +955,14 @@
 
 		<footer>
 			<a href="#" title="varta 1">
-				<picture>
+				<figure>
 					<amp-img
 						src="images/logo-footer.png"
 						alt=""
 						width="259"
 						height="137"
 					></amp-img>
-				</picture>
+				</figure>
 			</a>
 			<p>
 				Портал оперативних новин Varta1 був створений на тлі державних
