@@ -4,14 +4,17 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<title>amp-article :: varta_1</title>
-
+		<meta name="description" content="varta 1 - article" />
+		<link rel="icon" type="image/svg" href="./favicon.svg" />
+		<meta property="og:title" content="amp-article :: varta 1" />
+		<meta property="og:url" content="amp-article.html" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
 			rel="stylesheet"
 		/>
-
+		<!-- amp: -->
 		<script async src="https://cdn.ampproject.org/v0.js"></script>
 		<!-- gallery: -->
 		<script
@@ -19,7 +22,13 @@
 			custom-element="amp-carousel"
 			src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"
 		></script>
-		<link rel="canonical" href="amp-article.html" />
+		<!-- nav: -->
+		<script
+			async
+			custom-element="amp-sidebar"
+			src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"
+		></script>
+		<link rel="canonical" href="article.html" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<style amp-boilerplate>
 			body {
@@ -95,10 +104,10 @@
 				--gray2: #eeeff1;
 				--gray3: #5d595b;
 				--gray4: #e6e6e6;
-				--red-gradient: linear-gradient(320deg, #5d1f17, #ae1201);
+				--mobile: #191919;
+				/* --red-gradient: linear-gradient(320deg, #5d1f17, #ae1201); */
 				--footer-bg: #434a54;
 				--hr: #656b73;
-				/**/
 				--gap: 20px;
 			}
 			.wrapper {
@@ -142,6 +151,12 @@
 				background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOAQMAAAAVCq6zAAAABlBMVEUAAAAAAAClZ7nPAAAAAXRSTlMAQObYZgAAABFJREFUCNdj+P//AxijAULiAOzREZULVv5PAAAAAElFTkSuQmCC");
 				background-repeat: no-repeat;
 				background-size: cover;
+				border: none;
+			}
+			#nav-button[tabindex="-1"] {
+				background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff0000' viewBox='0 0 16 16'%3E%3Cpath d='M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z'/%3E%3C/svg%3E");
+				width: var(--gap);
+				height: var(--gap);
 			}
 			section {
 				margin: var(--gap) auto;
@@ -266,7 +281,6 @@
 				width: 95%;
 				margin: auto auto var(--gap);
 			}
-
 			#post-2 {
 				display: grid;
 				grid-template-columns: repeat(2, 1fr);
@@ -275,24 +289,18 @@
 					"post-2-title post-2-title"
 					"post-2-post-1 post-2-post-2";
 			}
-
 			#post-2 .title {
 				grid-area: post-2-title;
 			}
-
 			#post-2 article {
 				grid-area: post-2-post-2;
 			}
-
 			#post-2 article:nth-of-type(1) {
 				grid-area: post-2-post-1;
 			}
 			#post-2 .picture {
 				margin: 0 0 var(--gap);
 			}
-			/* 			#post-2 h1 {
-				font-size: 17px;
-			} */
 			#post-2 h1 a {
 				text-decoration: none;
 				color: var(--black);
@@ -314,7 +322,6 @@
 				font-size: 14px;
 				line-height: 20px;
 			}
-
 			#aside {
 				background: var(--gray1);
 				padding: var(--gap) 0;
@@ -322,12 +329,10 @@
 				border-top: 1px solid var(--gray4);
 				border-bottom: 1px solid var(--gray4);
 			}
-
 			#aside .title {
 				margin: 0 auto var(--gap);
 				width: 95%;
 			}
-
 			#aside article {
 				display: grid;
 				grid-template-columns: 40px 1fr;
@@ -368,7 +373,6 @@
 				display: block;
 				padding: 0;
 			}
-
 			#aside .picture {
 				display: block;
 				width: 100%;
@@ -377,7 +381,6 @@
 				overflow: hidden;
 				padding-top: 56.25%;
 			}
-
 			#aside .picture picture {
 				display: block;
 				width: 100%;
@@ -388,13 +391,11 @@
 				left: 0;
 				right: 0;
 			}
-
 			#aside .picture picture amp-img {
 				width: 100% !important;
 				height: 100% !important;
 				object-fit: cover;
 			}
-
 			#aside .bg .picture::before {
 				content: "";
 				position: absolute;
@@ -406,7 +407,6 @@
 				z-index: 1;
 				display: block;
 			}
-
 			#aside .bg .post-content {
 				position: absolute;
 				bottom: var(--gap);
@@ -417,7 +417,6 @@
 				grid-template-columns: 40px 1fr;
 				gap: 12px;
 			}
-
 			#aside .bg .post-content::before {
 				content: "";
 				position: absolute;
@@ -429,7 +428,6 @@
 				display: block;
 				z-index: 3;
 			}
-
 			#aside .bg .post-content time {
 				color: var(--white);
 			}
@@ -443,7 +441,6 @@
 				justify-content: center;
 				margin-top: var(--gap);
 			}
-
 			#aside .center a {
 				background: var(--red-gradient);
 				display: inline-block;
@@ -460,7 +457,6 @@
 				border: none;
 			}
 			footer {
-				/* width: 95%; */
 				margin: auto;
 				background: var(--footer-bg);
 				color: var(--white);
@@ -518,14 +514,52 @@
 			.social svg {
 				fill: var(--white);
 			}
+			#mobile {
+				width: 300px;
+				background: var(--mobile);
+			}
+
+			#mobile header {
+				border-bottom: 1px solid var(--gray2);
+				/* position: relative; */
+				width: 95%;
+				margin: auto;
+			}
+			#mobile header a {
+				display: block;
+				width: 120px;
+				height: 48px;
+			}
+			#mobile header amp-img {
+				filter: invert(1);
+			}
+			#mobile nav {
+				padding: 19px 24px 33px;
+				display: grid;
+				gap: var(--gap);
+				grid-template-columns: 1fr;
+				overflow-y: scroll;
+				height: calc(100vh - 65px);
+			}
+			#mobile nav ul {
+				display: flex;
+				flex-direction: column;
+				gap: calc(var(--gap) - 4px);
+			}
+			#mobile nav li {
+				display: block;
+			}
+			#mobile nav a {
+				color: var(--white);
+				text-decoration: none;
+				font-size: 14px;
+				line-height: 1;
+			}
+			#mobile nav a strong {
+				text-transform: uppercase;
+				font-weight: 700;
+			}
 		</style>
-
-		<meta name="description" content="varta 1 - article" />
-
-		<link rel="icon" type="image/svg" href="./favicon.svg" />
-
-		<meta property="og:title" content="amp-article :: varta 1" />
-		<meta property="og:url" content="amp-article.html" />
 	</head>
 	<body>
 		<header id="header">
@@ -538,9 +572,90 @@
 					height="48"
 				></amp-img>
 			</a>
-			<div id="search-button"></div>
-			<div id="nav-button"></div>
+			<a href="//varta1.com.ua/search.php" id="search-button"></a>
+
+			<button on="tap:mobile.toggle" id="nav-button"></button>
 		</header>
+
+		<amp-sidebar id="mobile" layout="nodisplay" side="left">
+			<header>
+				<a href="#" title="varta 1">
+					<amp-img
+						src="images/logo-header.png"
+						width="120"
+						height="48"
+						alt=""
+					></amp-img>
+				</a>
+			</header>
+
+			<nav>
+				<ul>
+					<li>
+						<a href="#"><strong>Новини</strong></a>
+					</li>
+					<li><a href="#">Головне</a></li>
+					<li><a href="#">Львів</a></li>
+					<li><a href="#">Політика</a></li>
+					<li><a href="#">Світ</a></li>
+					<li><a href="#">Коронавірус</a></li>
+					<li><a href="#">Економіка</a></li>
+					<li><a href="#">Кримінал</a></li>
+					<li><a href="#">Здоров'я</a></li>
+					<li><a href="#">Спорт</a></li>
+					<li><a href="#">Технології</a></li>
+					<li><a href="#">Курйози</a></li>
+					<li><a href="#">Місця</a></li>
+					<li><a href="#">Фоторепортажі</a></li>
+				</ul>
+				<ul>
+					<li>
+						<a href="#"><strong>Архів</strong></a>
+					</li>
+					<li><a href="#">Drozdov</a></li>
+					<li><a href="#">Правда у Христі</a></li>
+					<li><a href="#">Правова р[Е]волюція</a></li>
+					<li><a href="#">Наголо</a></li>
+					<li><a href="#">Антикриза</a></li>
+					<li><a href="#">Реальний футбол</a></li>
+					<li><a href="#">Культурний блог</a></li>
+					<li><a href="#">Наголос</a></li>
+				</ul>
+				<ul>
+					<li>
+						<a href="#"><strong>Телепроєкти</strong></a>
+					</li>
+					<li><a href="#">Пряма мова Львова</a></li>
+					<li><a href="#">Говорить Великий Львів</a></li>
+					<li><a href="#">Народне Толк-Шоу</a></li>
+					<li><a href="#">Ген українців</a></li>
+					<li><a href="#">Юркевич. Акценти</a></li>
+					<li><a href="#">Теорія правди</a></li>
+					<li><a href="#">Формула здоров'я</a></li>
+					<li><a href="#">Все можливо</a></li>
+					<li><a href="#">Отакої</a></li>
+					<li><a href="#">Без гриму</a></li>
+					<li><a href="#">Хвилина правди</a></li>
+				</ul>
+				<ul>
+					<li>
+						<a href="#"><strong>Телепрограма</strong></a>
+					</li>
+					<li>
+						<a href="#"><strong>Обличчя медія</strong></a>
+					</li>
+					<li>
+						<a href="#"><strong>Наживо</strong></a>
+					</li>
+					<li>
+						<a href="#"><strong>Блоги</strong></a>
+					</li>
+					<li><a href="#">Про нас</a></li>
+					<li><a href="#">Контакти</a></li>
+					<li><a href="#">Реклама</a></li>
+				</ul>
+			</nav>
+		</amp-sidebar>
 
 		<section>
 			<h1>
