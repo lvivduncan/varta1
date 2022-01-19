@@ -172,25 +172,18 @@ iframe
     max-width: 100%!important;
 }
 
-.desktop-hide
+@media (max-width:776px)
 {
-    display: block;
+    .mobile-hide
+    {
+        display:none!important
+    }
 }
 
-.mobile-hide
-{
-    display: none;
-}
-
-@media(max-width:776px)
+@media (min-width:776px)
 {
     .desktop-hide
     {
-        display: none
+        display:none!important
     }
-
-    .mobile-hide
-    {
-        display: block
-    }    
 }
