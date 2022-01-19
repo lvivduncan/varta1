@@ -7,7 +7,6 @@
 		<title>article :: varta_1</title>
 		<meta name="description" content="varta 1 - article" />
 		<style>
-			@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap);
 			* {
 				padding: 0;
 				margin: 0;
@@ -40,6 +39,9 @@
 			body,
 			html {
 				height: 100%;
+				font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+					Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+					"Helvetica Neue", sans-serif;
 			}
 			body {
 				font-size: 18px;
@@ -49,10 +51,6 @@
 			a {
 				text-decoration: underline;
 				color: var(--black);
-			}
-			a:focus,
-			a:hover {
-				text-decoration: none;
 			}
 			picture img,
 			picture source {
@@ -1283,84 +1281,6 @@
 					background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8'/%3E%3C/svg%3E");
 				}
 			}
-			#levus-lightbox {
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				z-index: -1;
-				opacity: 0;
-				transition: 0.5s;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				cursor: pointer;
-			}
-			#levus-lightbox.active {
-				z-index: 2;
-				opacity: 1;
-			}
-			#levus-lightbox picture {
-				border: 10px solid transparent;
-				position: absolute;
-				top: 0;
-				left: 0;
-				z-index: 4;
-				transition: 1.5s;
-				opacity: 0;
-				height: 100%;
-				width: 100%;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				padding: 15px 15px 25px;
-			}
-			#levus-lightbox.active picture {
-				opacity: 1;
-			}
-			#levus-lightbox picture img {
-				max-width: 100%;
-				height: 100% !important;
-				object-fit: cover;
-			}
-			#levus-lightbox picture img.touch {
-				cursor: grabbing;
-			}
-			#levus-lightbox::before {
-				content: "";
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background: rgba(0, 0, 0, 0.65);
-				z-index: 2;
-			}
-			#levus-lightbox::after {
-				content: "";
-				width: 18px;
-				height: 18px;
-				position: absolute;
-				top: 10px;
-				right: 10px;
-				z-index: 3;
-				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 16 16'%3E%3Cpath d='M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z'/%3E%3C/svg%3E");
-				background-size: cover;
-			}
-			.levus-touch-gallery a.grab {
-				cursor: grabbing;
-			}
-			#levus-lightbox-desc {
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				width: 100%;
-				padding: 10px;
-				color: #fff;
-				text-align: center;
-				z-index: 4;
-			}
 		</style>
 		<link
 			rel="preload"
@@ -1420,7 +1340,10 @@
 				<header id="mobile-header">
 					<a href="#" title="varta 1" id="mobile-logo">
 						<picture>
-							<source srcset="images/logo-header.webp" type="image/webp" />
+							<source
+								srcset="images/logo-header.webp"
+								type="image/webp"
+							/>
 							<img src="images/logo-header.png" alt="" />
 						</picture>
 					</a>
@@ -1523,7 +1446,10 @@
 						<figure>
 							<div class="picture">
 								<picture>
-									<source srcset="temp/08.webp" type="image/webp" />
+									<source
+										srcset="temp/08.webp"
+										type="image/webp"
+									/>
 									<img
 										src="temp/08.jpg"
 										alt="Зі Львова можна буде літати на матчі команд Гвардіоли і Сульшера: Ryanair відкриє два авіарейси Львів-Манчестер"
@@ -1611,7 +1537,10 @@
 							</p>
 
 							<picture>
-								<source srcset="temp/une-gulnar.webp" type="image/webp" />
+								<source
+									srcset="temp/une-gulnar.webp"
+									type="image/webp"
+								/>
 								<img
 									src="temp/une-gulnar.jpg"
 									width="100"
@@ -1833,7 +1762,10 @@
 						<article class="post">
 							<div class="picture">
 								<picture>
-									<source srcset="temp/02.webp" type="image/webp" />
+									<source
+										srcset="temp/02.webp"
+										type="image/webp"
+									/>
 									<img src="temp/02.jpg" alt="" />
 								</picture>
 							</div>
@@ -1858,7 +1790,10 @@
 						<article class="post">
 							<div class="picture">
 								<picture>
-									<source srcset="temp/03.webp" type="image/webp" />
+									<source
+										srcset="temp/03.webp"
+										type="image/webp"
+									/>
 									<img src="temp/03.jpg" alt="" />
 								</picture>
 							</div>
@@ -1938,7 +1873,10 @@
 					<article class="preview bg">
 						<div class="picture">
 							<picture>
-								<source srcset="temp/velo.webp" type="image/webp" />
+								<source
+									srcset="temp/velo.webp"
+									type="image/webp"
+								/>
 								<img src="temp/velo.jpg" alt="" />
 							</picture>
 
@@ -2024,7 +1962,10 @@
 					<article class="preview bg">
 						<div class="picture">
 							<picture>
-								<source srcset="temp/velo.webp" type="image/webp" />
+								<source
+									srcset="temp/velo.webp"
+									type="image/webp"
+								/>
 								<img src="temp/velo.jpg" alt="" />
 							</picture>
 
@@ -2095,7 +2036,10 @@
 					<article class="preview bg">
 						<div class="picture">
 							<picture>
-								<source srcset="temp/velo.webp" type="image/webp" />
+								<source
+									srcset="temp/velo.webp"
+									type="image/webp"
+								/>
 								<img src="temp/velo.jpg" alt="" />
 							</picture>
 
@@ -2124,7 +2068,10 @@
 				<div id="footer-left">
 					<a href="#" title="varta 1">
 						<picture>
-							<source srcset="images/logo-footer.webp" type="image/webp" />
+							<source
+								srcset="images/logo-footer.webp"
+								type="image/webp"
+							/>
 							<img
 								src="images/logo-footer.png"
 								width="259"
