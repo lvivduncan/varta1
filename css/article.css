@@ -154,6 +154,12 @@ figure figcaption
     word-break: break-word;
 }
 
+/* картинка загубилася */
+[class*="wp-image"]
+{
+    display: none;
+}
+
 #article-content main p 
 {
     font-size: 16px;
