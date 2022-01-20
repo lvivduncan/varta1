@@ -155,7 +155,7 @@ figure figcaption
 }
 
 /* картинка загубилася */
-[class*="wp-image"]
+img[class*="wp-image"]
 {
     display: none;
 }
