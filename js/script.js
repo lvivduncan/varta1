@@ -1,7 +1,5 @@
 // 5-11-2021
 {
-	const initElements = []
-
 	const body = document.body
 
 	// клік на кнопці -- відкриває форму пошуку
@@ -124,4 +122,4 @@
 		return document.querySelectorAll(selector)
 	}
 }
-// 17-01-22
+// 21-01-22
