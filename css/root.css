@@ -193,3 +193,9 @@ iframe
         display:none!important
     }
 }
+
+/* гугл-реклама */
+.add
+{
+    overflow: hidden!important;
+}
