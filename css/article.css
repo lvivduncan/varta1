@@ -226,3 +226,10 @@ main a
 main a:hover{
     color: var(--black);
 }
+
+/* 28-01-2022 */
+#article-content main ul,
+#article-content main ol 
+{
+    margin: var(--gap) var(--gap) var(--gap) calc(var(--gap)*2);
+}
