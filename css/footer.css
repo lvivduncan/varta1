@@ -170,6 +170,7 @@
     align-items: center;
     justify-content: space-between;
     min-height: 70px;
+    color: var(--gray5);
 }
 
 @media(max-width:776px)
@@ -191,8 +192,8 @@
 
 #copyright p 
 {
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 18px;
     font-weight: 300;
 }
 
@@ -213,6 +214,10 @@
         padding: 0 0 var(--gap);
     }
 }
+#copyright a
+{
+    color: var(--gray5);
+}
 
 #copyright a:hover, 
 #copyright a:focus 
@@ -224,5 +229,32 @@
 #copyright svg
 {
     position: relative;
-    top: 7px
+    top: 4px
+}
+
+#copyright .ova-in-ua
+{
+    white-space: nowrap;
+}
+
+#copyright .ova-in-ua svg
+{
+    fill: var(--gray5);
+}
+
+#copyright .ova-in-ua a,
+#copyright .ova-in-ua a svg
+{
+    text-decoration: none;
+    transition: .5s;
+}
+
+#copyright .ova-in-ua a:hover
+{
+    color: var(--gray6)
+}
+
+#copyright .ova-in-ua a:hover svg
+{
+    fill: var(--gray6)
 }
