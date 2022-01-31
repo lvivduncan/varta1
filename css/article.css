@@ -233,3 +233,11 @@ main a:hover{
 {
     margin: var(--gap) var(--gap) var(--gap) calc(var(--gap)*2);
 }
+
+#article-content main li 
+{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    margin: var(--gap) 0;
+}
