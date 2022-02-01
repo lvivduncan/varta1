@@ -185,6 +185,7 @@
         padding: 15px 0;
         /* conflict */
         margin: 0!important;
+        flex-wrap: wrap!important;
     }
     .levus-touch-gallery .dots li
     {

@@ -53,6 +53,10 @@ figure figcaption
     line-height: 24px;
     font-weight: 400;
     text-align: right;
+
+    -ms-word-break: break-all!important;
+    word-break: break-all!important;
+    word-break: break-word!important;
 }
 
 #page #content aside 
