@@ -160,6 +160,14 @@ img[class*="wp-image"]
     display: none;
 }
 
+#article-content main h1,
+#article-content main h2,
+#article-content main h3,
+#article-content main h4
+{
+    margin: 0 0 var(--gap);
+}
+
 #article-content main p 
 {
     font-size: 16px;
