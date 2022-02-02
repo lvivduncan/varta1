@@ -1,0 +1,67 @@
+
+/* //////////////////////////////////
+// використовуємо шаблон категорії //
+////////////////////////////////// */
+
+#category-content header
+{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: var(--gap);
+    margin: 0 0 var(--gap);
+    grid-template-areas: 'author-figure author-figcaption';
+}
+
+@media(max-width:450px)
+{
+    #category-content header
+    {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        'author-figcaption'
+        'author-figure'
+    }
+}
+
+#category-content header figure
+{
+    grid-area: author-figure;
+}
+
+#category-content header figcaption
+{
+    grid-area: author-figcaption;
+
+    font-style: italic;
+    font-size: 14px;
+}
+
+#category-content header figcaption p
+{
+    margin: 0 0 var(--gap);
+}
+
+/*
+// 
+*/
+.cv-social
+{
+    display: flex;
+    gap: calc(var(--gap)/2);
+}
+
+.cv-social a
+{
+    text-decoration: none;
+}
+
+.cv-social svg 
+{
+    width: 22px;
+    height: 22px;
+}
+
+.cv-social :hover svg
+{
+    fill: var(--red)
+}
