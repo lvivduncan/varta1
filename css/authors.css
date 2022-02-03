@@ -1,7 +1,7 @@
 
-/* //////////////////////////////////
-// використовуємо шаблон категорії //
-////////////////////////////////// */
+/* ////////
+// автор //
+//////// */
 
 #category-content header
 {
@@ -32,18 +32,20 @@
 {
     grid-area: author-figcaption;
 
-    font-style: italic;
     font-size: 14px;
+}
+
+#category-content header figcaption h1
+{
+    margin: 0 0 var(--gap)
 }
 
 #category-content header figcaption p
 {
+    font-style: italic;
     margin: 0 0 var(--gap);
 }
 
-/*
-// 
-*/
 .cv-social
 {
     display: flex;
@@ -64,4 +66,68 @@
 .cv-social :hover svg
 {
     fill: var(--red)
+}
+
+/* /////////////
+// усі автори //
+///////////// */
+
+#authors
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: var(--gap);
+    padding: var(--gap) 0;
+}
+
+@media(max-width:540px)
+{
+    #authors
+    {
+        grid-template-columns: 1fr;
+    }
+}
+
+#authors article
+{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: var(--gap);
+    grid-template-areas: 
+        'author-figure author-figcaption';
+}
+
+@media(max-width:776px)
+{
+    #authors article
+    {
+        align-self: flex-start;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'author-figure'
+            'author-figcaption'
+    }
+}
+
+#authors article figure
+{
+    grid-area: author-figure;
+}
+
+#authors article figcaption
+{
+    grid-area: author-figcaption;
+
+    font-size: 14px;
+}
+
+#authors article h1
+{
+    margin: 0 0 var(--gap)
+}
+
+#authors article p
+{
+    font-style: italic;
+    margin: 0 0 var(--gap);
 }
