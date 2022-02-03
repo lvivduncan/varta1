@@ -164,3 +164,9 @@
         color: var(--white);
     }    
 }
+
+/* автор лінком */
+.post-primary .service-data a
+{
+    color: var(--white);
+}

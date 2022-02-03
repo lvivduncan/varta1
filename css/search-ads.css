@@ -187,6 +187,8 @@
 .search-ads-main .service-data
 {
     padding: 0 var(--gap);
+    /* for author */
+    display: block;
 }
 
 .search-ads-main .service-data time
@@ -229,4 +231,11 @@
     {
         width: 260px;
     }    
+}
+
+/* автор лінком */
+.search-ads-main .service-data a
+{
+    color: var(--white);
+    display: block;
 }

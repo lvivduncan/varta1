@@ -7,19 +7,15 @@
 {
     display: flex;
     align-items: center;
-    gap: var(--gap);
+    gap: calc(var(--gap)/2);
     margin: calc(var(--gap)/4) 0;
 }
 
-/*
-color: var(--gray5); -- колір з дизайну, який лайтхауз не приймає
-*/
 .service-data time 
 {
     font-size: 12px;
     line-height: 20px;
     color: var(--gray3);
-    /* font-weight: 800; */
     font-weight: 700;
 }
 
@@ -39,4 +35,20 @@ color: var(--gray5); -- колір з дизайну, який лайтхауз 
     clip-path: polygon(0% 23.33%, 100% 23.33%, 100% 81.67%, 55% 81.67%, 32.50% 103.33%, 32.5% 81.67%, 0% 81.67%);
     position: relative;
     top: -2px;
+}
+
+/* автор допису */
+.service-data a 
+{
+    font-size: 11px;
+    line-height: 20px;
+    /* color: var(--gray3); */
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.service-data a:hover
+{
+    color: var(--red);
 }

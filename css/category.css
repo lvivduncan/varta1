@@ -63,6 +63,7 @@
     grid-area: categories-post-service-data;
     flex-flow: column;
     gap: 0;
+    align-items: flex-start;
 }
 
 #categories .post .picture

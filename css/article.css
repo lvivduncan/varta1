@@ -249,3 +249,12 @@ main a:hover{
     font-weight: 500;
     margin: var(--gap) 0;
 }
+
+/* автор допису + "новини" */
+main .author
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
