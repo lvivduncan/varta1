@@ -10,7 +10,7 @@
     position: absolute;
     top: var(--gap);
     left: var(--gap);
-    z-index: 2;
+    z-index: 3;
 }
 
 /* фонова картинка, .picture обнуляємо */
@@ -62,7 +62,7 @@
     left: var(--gap);
     right: var(--gap);
     color: var(--white);
-    z-index: 2;
+    z-index: 3;
 
     display: flex;
     flex-flow: column;
@@ -169,4 +169,15 @@
 .post-primary .service-data a
 {
     color: var(--white);
+}
+
+/* додатковий лінк для картинки */
+.link-wrapper
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
 }
