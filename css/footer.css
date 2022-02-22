@@ -204,7 +204,7 @@
         order: 2;
 
         border-top: 1px solid var(--footer-border);
-        padding: var(--gap);
+        padding: var(--gap) var(--gap) var(--gap) calc(var(--gap)*3);
         text-align: center;
     }
     

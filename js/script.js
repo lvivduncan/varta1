@@ -110,6 +110,29 @@
 		})
 	)
 
+	// join buttons
+	if ($(".join")) {
+		const joinButtons = $$("[data-txt]")
+		const joinButtonsSelected = []
+		const joinButtonsSend = $(".join button")
+		const joinOutput = $(".join p")
+
+		for (let i = 0, length = joinButtons.length; i < length; i++) {
+			joinButtons[i].addEventListener("click", function () {
+				for (let k = 0; k < length; k++) {
+					joinButtons[k].className = ""
+				}
+				this.className = "selected"
+				joinButtonsSelected[0] = this.dataset.txt
+				joinButtonsSelected[1] = this.dataset.link
+				joinOutput.textContent = joinButtonsSelected[0]
+			})
+		}
+		joinButtonsSend.addEventListener("click", () => {
+			window.open(joinButtonsSelected[1], "_blank").focus()
+		})
+	}
+
 	function getID(selector) {
 		return document.getElementById(selector)
 	}
@@ -122,4 +145,4 @@
 		return document.querySelectorAll(selector)
 	}
 }
-// 21-01-22
+// 22-02-22
