@@ -195,6 +195,7 @@
     font-size: 18px;
     line-height: 18px;
     font-weight: 300;
+    padding: 0 0 0 calc(var(--gap)*3);
 }
 
 @media(max-width:776px)
@@ -206,6 +207,7 @@
         border-top: 1px solid var(--footer-border);
         padding: var(--gap) var(--gap) var(--gap) calc(var(--gap)*3);
         text-align: center;
+        line-height: 1.5;
     }
     
     #copyright .social
@@ -257,4 +259,20 @@
 #copyright .ova-in-ua a:hover svg
 {
     fill: var(--gray6)
+}
+
+@media(max-width:776px)
+{
+    .bigmir
+    {
+        text-align: center
+    }
+}
+
+@media(max-width:776px)
+{
+    .bigmir
+    {
+        text-align: center;
+    }    
 }
